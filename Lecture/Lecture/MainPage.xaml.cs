@@ -31,5 +31,10 @@ namespace Lecture
         {
             TextBlock1.Text = "Hello World!";
         }
+
+        private void CheckBox1_Check(object sender, RoutedEventArgs e)
+        {
+            TextBlock2.Text = "Well Done!!";
+        }
     }
 }
