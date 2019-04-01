@@ -7,17 +7,25 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-
+<!--
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
-        <Button x:Name="Button1" Content="My button" HorizontalAlignment="Left" Margin="338,174,0,0" VerticalAlignment="Top" Height="157" Width="172" Click="Button1_Click"/>
-        <TextBlock x:Name="TextBlock1" Grid.Row="1" HorizontalAlignment="Left" Margin="255,202.667,0,0" Text="Click the button" TextWrapping="Wrap" VerticalAlignment="Top" Height="138" Width="414" FontSize="48"/>
-        <CheckBox x:Name="CheckBox1" Content="CheckBox" HorizontalAlignment="Left" Margin="688,174,0,0" VerticalAlignment="Top" Checked="CheckBox1_Check" Height="111" Width="280" FontSize="36" FontFamily="Britannic Bold"/>
-        <TextBlock x:Name="TextBlock2" HorizontalAlignment="Left" Margin="1054,381,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="110" Width="198" FontSize="36" RenderTransformOrigin="0.475,0.527"/>
+
+        <Rectangle Fill="Red" Grid.Row="0" Width="50" Height="50" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Rectangle Fill="Green" Grid.Row="1" Width="100" Height="100" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Rectangle Fill="Blue" Grid.Row="2" Width="250" Height="100" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Button Content="Button" HorizontalAlignment="Right" Margin="0,10.333,10,0" Grid.Row="1" VerticalAlignment="Top"/>
+
 
 
     </Grid>
+-->
+    
+    <StackPanel Orientation="Horizontal">
+        <Rectangle Width="200" Height="200" Fill="Bisque" />
+    </StackPanel>
 </Page>

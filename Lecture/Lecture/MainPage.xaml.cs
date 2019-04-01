@@ -27,14 +27,6 @@ namespace Lecture
             this.InitializeComponent();
         }
 
-        private void Button1_Click(object sender, RoutedEventArgs e)
-        {
-            TextBlock1.Text = "Hello World!";
-        }
-
-        private void CheckBox1_Check(object sender, RoutedEventArgs e)
-        {
-            TextBlock2.Text = "Well Done!!";
-        }
+        
     }
 }
