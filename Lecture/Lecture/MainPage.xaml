@@ -25,7 +25,25 @@
     </Grid>
 -->
     
-    <StackPanel Orientation="Horizontal">
+    <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
         <Rectangle Width="200" Height="200" Fill="Bisque" />
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Rectangle Width="100" Height="100" Fill="Azure" />
+                <StackPanel Orientation="Vertical">
+                    <Rectangle Width="100" Height="50" Fill="RosyBrown" />
+                    <Rectangle Width="100" Height="50" Fill="DarkCyan" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Rectangle Width="100" Height="100" Fill="Tomato" />
+                <StackPanel Orientation="Vertical">
+                    <Rectangle Width="100" Height="50" Fill="Burlywood" />
+                    <Rectangle Width="100" Height="50" Fill="SaddleBrown" />
+                </StackPanel>            
+            </StackPanel>
+        </StackPanel>
+    
+    
     </StackPanel>
 </Page>
