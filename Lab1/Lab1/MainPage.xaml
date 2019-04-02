@@ -8,15 +8,21 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="TextBlock1" HorizontalAlignment="Left" Margin="10,10,0,0" Text="ACME Sales Corp" TextWrapping="Wrap" VerticalAlignment="Top" Height="91" Width="422" FontSize="48"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,92,0,0" Text="First Name:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,141,0,0" Text="Last Name:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,189,0,0" Text="Email:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-
-        <TextBox x:Name="GridNeed1"  HorizontalAlignment="Left" Margin="161,86,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Grid.RowSpan="1" Grid.Column="100" Grid.ColumnSpan="100" FontFamily="Segoe UI"/>
-
-        <TextBox x:Name="GridNeed2"  HorizontalAlignment="Left" Margin="161,135,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Grid.RowSpan="1" Grid.Column="1" Grid.ColumnSpan="1" FontFamily="Segoe UI" />
         <TextBox x:Name="GridNeed3"  HorizontalAlignment="Left" Margin="161,183,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Grid.RowSpan="1" Grid.Column="1" Grid.ColumnSpan="1" FontFamily="Segoe UI"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
 
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="0"  Text="ACME Sales Corp" TextWrapping="Wrap" VerticalAlignment="Center" Height="76" Width="427" FontSize="48"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" Text="First Name:" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" Text="Last Name:" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" Text="Email:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Rectangle Fill="Black" Grid.Row="1" Height="50" Margin="295,20,128,20" VerticalAlignment="Stretch"/>
     </Grid>
 </Page>
