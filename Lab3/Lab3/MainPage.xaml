@@ -7,7 +7,35 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="500">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="0" Text="Title 1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" Text="Title 2" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="4" Text="Title 3" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"/>
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0"  Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus, mi nec fermentum congue, turpis nibh porttitor ex, sed commodo neque eros non libero. Donec mauris felis, malesuada nec consectetur et, pharetra in ante. Praesent nec hendrerit purus. Ut vel nunc id nisl volutpat porta. Cras in convallis ipsum. Integer id sollicitudin ex. Ut sed iaculis nisl. 
+" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="11"/>
+            <StackPanel Orientation="Horizontal">
+                <Rectangle Fill="Green" Height="30" Width="100"/>
+                <Rectangle Fill="Black" Height="30" Width="100"/>
+                <Rectangle Fill="Red" Height="30" Width="100"/>
+            </StackPanel>
+        </StackPanel>
+        
+
 
     </Grid>
 </Page>
