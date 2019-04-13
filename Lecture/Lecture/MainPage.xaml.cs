@@ -25,8 +25,29 @@ namespace Lecture
         public MainPage()
         {
             this.InitializeComponent();
+            InnerFrame.Navigate(typeof(Page1));
         }
 
         
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            InnerFrame.Navigate(typeof(Page1));
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(InnerFrame.CanGoBack)
+            {
+                InnerFrame.GoBack();
+            }
+        }
+
+        private void ForwardButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(InnerFrame.CanGoForward)
+            {
+                InnerFrame.GoForward();
+            }
+        }
     }
 }
