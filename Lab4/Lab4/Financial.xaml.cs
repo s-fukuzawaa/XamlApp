@@ -26,13 +26,6 @@ namespace Lab4
         {
             this.InitializeComponent();
         }
-
         
-
-
-        private void Search_Click(object sender, RoutedEventArgs e)
-        {
-            Sear.Text = "";
-        }
     }
 }

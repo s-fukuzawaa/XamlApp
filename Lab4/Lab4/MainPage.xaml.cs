@@ -36,11 +36,12 @@ namespace Lab4
         {
             if (FinancialListBoxItem.IsSelected)
             {
-                Frame.Navigate(typeof(Financial));
+                Inner.Navigate(typeof(Financial));
             }
             else if (FoodListBoxItem.IsSelected)
             {
-                Frame.Navigate(typeof(Food));
+                Inner.Navigate(typeof(Food));
+
             }
 
         }
