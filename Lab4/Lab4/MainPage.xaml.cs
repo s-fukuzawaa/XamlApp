@@ -27,9 +27,22 @@ namespace Lab4
             this.InitializeComponent();
         }
 
-        private void Main_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Financial));
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (FinancialListBoxItem.IsSelected)
+            {
+                Frame.Navigate(typeof(Financial));
+            }
+            else if (FoodListBoxItem.IsSelected)
+            {
+                Frame.Navigate(typeof(Food));
+            }
+
         }
     }
 }

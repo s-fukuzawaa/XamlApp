@@ -27,22 +27,12 @@ namespace Lab4
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
-        }
+        
 
-        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if(ShareListBoxItem.IsSelected)
-            {
-                ResultTextBlock.Text = "Share";
-            }
-            else if(FavoritesListBoxItem.IsSelected)
-            {
-                ResultTextBlock.Text = "Favorites";
-            }
 
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            Sear.Text = "";
         }
     }
 }
