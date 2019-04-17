@@ -25,29 +25,27 @@ namespace Lecture
         public MainPage()
         {
             this.InitializeComponent();
-            InnerFrame.Navigate(typeof(Page1));
         }
 
+       
         
-        private void HomeButton_Click(object sender, RoutedEventArgs e)
+
+        private void HamburgerButon_Click(object sender, RoutedEventArgs e)
         {
-            InnerFrame.Navigate(typeof(Page1));
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(InnerFrame.CanGoBack)
+            if(ShareListBoxItem.IsSelected)
             {
-                InnerFrame.GoBack();
+                ResultTextBlock.Text = "Share";
             }
-        }
+            else if(FavoritesListBoxItem.IsSelected)
+            {
+                ResultTextBlock.Text = "Favorites";
+            }
 
-        private void ForwardButton_Click(object sender, RoutedEventArgs e)
-        {
-            if(InnerFrame.CanGoForward)
-            {
-                InnerFrame.GoForward();
-            }
         }
     }
 }
