@@ -25,8 +25,8 @@ namespace Lab4
         public MainPage()
         {
             this.InitializeComponent();
+            InnerFrame.Navigate(typeof(Financial));
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
@@ -36,11 +36,11 @@ namespace Lab4
         {
             if (FinancialListBoxItem.IsSelected)
             {
-                Frame.Navigate(typeof(Financial));
+                InnerFrame.Navigate(typeof(Financial));
             }
             else if (FoodListBoxItem.IsSelected)
             {
-                Frame.Navigate(typeof(Food));
+                InnerFrame.Navigate(typeof(Food));
             }
 
         }

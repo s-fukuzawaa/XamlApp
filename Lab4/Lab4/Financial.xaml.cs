@@ -28,11 +28,5 @@ namespace Lab4
         }
 
         
-
-
-        private void Search_Click(object sender, RoutedEventArgs e)
-        {
-            Sear.Text = "";
-        }
     }
 }

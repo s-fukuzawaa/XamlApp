@@ -14,8 +14,10 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" >
             <Button Name="Button" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="36" Click="Button_Click" />
+
         </StackPanel>
-        
+
+        <Frame Name="InnerFrame" Margin="55,0,0,0" Grid.RowSpan="2" />
         <SplitView Name="MySplitView" Grid.Row="1" DisplayMode="CompactOverlay" OpenPaneLength="200" CompactPaneLength="56" HorizontalAlignment="Left" FontFamily="Arial">
             <SplitView.Pane>
                 <ListBox SelectionMode="Single" Name="IconListBox" SelectionChanged="IconsListBox_SelectionChanged" FontFamily="Segoe UI">
@@ -39,5 +41,5 @@
             </SplitView.Content>
         </SplitView>
     </Grid>
-    
+
 </Page>
