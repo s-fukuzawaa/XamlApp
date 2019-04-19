@@ -40,7 +40,6 @@
                 <TextBlock Name="ResultTextBlock"/>
             </SplitView.Content>
         </SplitView>
-        <Frame Name="Inner"/>
 
     </Grid>
 
