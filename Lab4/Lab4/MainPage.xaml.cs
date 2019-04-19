@@ -26,6 +26,7 @@ namespace Lab4
         {
             this.InitializeComponent();
             InnerFrame.Navigate(typeof(Financial));
+            
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {

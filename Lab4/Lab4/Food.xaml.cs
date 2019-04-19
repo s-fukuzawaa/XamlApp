@@ -30,6 +30,8 @@ namespace Lab4
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             back.Navigate(typeof(Financial));
+            Button.Visibility = Visibility.Collapsed;
+            Foodtext.Visibility = Visibility.Collapsed;
         }
     }
 }
