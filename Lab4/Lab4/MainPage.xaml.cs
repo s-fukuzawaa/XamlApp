@@ -36,7 +36,7 @@ namespace Lab4
         {
             if (FinancialListBoxItem.IsSelected)
             {
-		 Inner.Navigate(typeof(Financial));
+		        InnerFrame.Navigate(typeof(Financial));
             }
             else if (FoodListBoxItem.IsSelected)
             {
