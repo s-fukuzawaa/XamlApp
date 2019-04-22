@@ -21,11 +21,11 @@
             <TextBlock Name="text" Text=" Food " FontFamily="Arial" FontWeight="Bold" FontSize="28" VerticalAlignment="Center" />
 
 
-            <TextBox Width="300" Grid.Row="0"  FontFamily="Segoe MDL2 Assets" Text="Search" FontSize="24" SelectionHighlightColor="LightGray"/>
-            <Button Name="Search" FontFamily="Segoe MDL2 Assets" Content="&#xE71E;" FontSize="36" Grid.Row="0"  HorizontalAlignment="Right"/>
+            
         </StackPanel>
 
-
+        <TextBox Width="300"  Grid.Row="0" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Text="Search" FontSize="24" SelectionHighlightColor="LightGray"/>
+        <Button Name="Search"  FontFamily="Segoe MDL2 Assets" Content="&#xE71E;" FontSize="36" Grid.Row="0"  HorizontalAlignment="Right"/>
         <SplitView Name="MySplitView" Grid.Row="1" DisplayMode="CompactOverlay" OpenPaneLength="200" CompactPaneLength="56" HorizontalAlignment="Left" FontFamily="Arial">
             <SplitView.Pane>
                 <ListBox SelectionMode="Single" Name="IconListBox" SelectionChanged="IconsListBox_SelectionChanged" FontFamily="Segoe UI">
