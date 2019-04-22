@@ -26,7 +26,9 @@ namespace Lab4
         {
             this.InitializeComponent();
             InnerFrame.Navigate(typeof(Financial));
-            food.Visibility = Visibility.Collapsed;
+            text.Text = "  Financial  ";
+            BackButton.Visibility = Visibility.Collapsed;
+
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -37,15 +39,17 @@ namespace Lab4
         {
             if (FinancialListBoxItem.IsSelected)
             {
-                financial.Visibility = Visibility.Visible;
-                food.Visibility = Visibility.Collapsed;
+                text.Text = "  Financial  ";
+
+                BackButton.Visibility = Visibility.Collapsed;
 
                 InnerFrame.Navigate(typeof(Financial));
             }
             else if (FoodListBoxItem.IsSelected)
             {
-                financial.Visibility = Visibility.Collapsed;
-                food.Visibility = Visibility.Visible;
+                text.Text = "  Food  ";
+
+                BackButton.Visibility = Visibility.Visible;
 
                 InnerFrame.Navigate(typeof(Food));
             }
@@ -54,9 +58,8 @@ namespace Lab4
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-
-            financial.Visibility = Visibility.Visible;
-            food.Visibility = Visibility.Collapsed;
+            text.Text = "  Financial  ";
+            BackButton.Visibility = Visibility.Collapsed;
             InnerFrame.Navigate(typeof(Financial));
         }
     }
