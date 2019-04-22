@@ -9,26 +9,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" >
-
-
-            <TextBlock Text=" Financial " FontFamily="Arial" FontWeight="Bold" FontSize="28" VerticalAlignment="Center" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-
-            <TextBox Width="300" Grid.Row="0"  FontFamily="Segoe MDL2 Assets" Text="Search" FontSize="24" SelectionHighlightColor="LightGray"/>
-            <Button Name="Search" FontFamily="Segoe MDL2 Assets" Content="&#xE71E;" FontSize="36" Grid.Row="0"  HorizontalAlignment="Right"/>
-        </StackPanel>
-
+       
 
 
         
        
-        <Image Source="Assets/Financial.png" Grid.Row="1" HorizontalAlignment="Left" Stretch="Fill"></Image>
+        <Image Source="Assets/Financial.png" Stretch="Uniform"></Image>
 
         
     </Grid>
