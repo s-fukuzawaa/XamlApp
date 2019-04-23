@@ -6,8 +6,33 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="MyBrush" Color="White" />
+            <x:String x:Key="greeting">Coffee</x:String>
+            
+            <Style TargetType="Button" x:Key="MyButtonStyle">
+                <Setter Property="Background" Value="Black" />
+                <Setter Property="FontFamily" Value="Arial Black" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="Foreground" Value="White" />
 
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Button Style="{StaticResource MyButtonStyle}" Name="Donuts" Grid.Column="0" Height="100" Content="Donuts"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
     </Grid>
 </Page>
