@@ -8,21 +8,19 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-   
-    <Grid Style="{StaticResource Complete}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="66*" />
-            <ColumnDefinition Width="33*" />
-        </Grid.ColumnDefinitions>
+
+    <Grid Style="{StaticResource Complete}" >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
 
         </Grid.RowDefinitions>
         <Image Source="Assets/gnc.png" Grid.Row="0"  Grid.Column="1" Stretch="None" HorizontalAlignment="Left" />
-        <Image Source="Assets/tag.jpg" Grid.Row="1"  Grid.Column="1" Stretch="None" HorizontalAlignment="Left"/>
+        <Image Source="Assets/tag.jpg" Grid.Row="1"  Grid.Column="1" Stretch="Uniform" HorizontalAlignment="Center" />
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBlock Text="Order" FontSize="90" />
+            <TextBlock Text="96" FontSize="150"  HorizontalAlignment="Center" />
+        </StackPanel>
 
     </Grid>
 </Page>

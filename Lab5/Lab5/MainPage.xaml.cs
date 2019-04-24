@@ -25,7 +25,7 @@ namespace Lab5
         public MainPage()
         {
             this.InitializeComponent();
-            InnerFrame.Navigate(typeof(CoffeePage));
+            InnerFrame.Navigate(typeof(DonutPage));
         }
 
         private void Donuts_Click(object sender, RoutedEventArgs e)
