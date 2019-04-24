@@ -12,8 +12,8 @@
         <Grid Style="{StaticResource Donut}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="10"/>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -29,6 +29,7 @@
                      Grid.Column="2"
                      Margin="10,0,0,0"
                      Minimum="0"
+                     Width="200"
                      HorizontalAlignment="Left"
                      VerticalAlignment="Center"
                      Maximum="24" />
@@ -39,6 +40,7 @@
                      Grid.Row="2"
                      Grid.Column="2"
                      Minimum="0"
+                     Width="200"
                      HorizontalAlignment="Left"
                      VerticalAlignment="Center"
                      Maximum="24" />
