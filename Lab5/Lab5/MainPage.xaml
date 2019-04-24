@@ -18,27 +18,77 @@
             </Style>
         </ResourceDictionary>
     </Page.Resources>
+    <Grid>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="33*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        
-            <Button Style="{StaticResource MyButtonStyle}" Name="Donuts" Grid.Column="0" Height="100" Content="Donuts"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Donuts_Click"/>
-            <Button Style="{StaticResource MyButtonStyle}" Name="Coffee" Grid.Column="1" Height="100" Content="Coffee"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <Button Style="{StaticResource MyButtonStyle}" Name="Schedule" Grid.Column="2" Height="100" Content="Schedule"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <Button Style="{StaticResource MyButtonStyle}" Name="Complete" Grid.Column="3" Height="100" Content="Complete"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Image Source="Assets/table.jpg" Grid.Row="1" Grid.Column="1" Stretch="UniformToFill"/>
+        <Frame Name="InnerFrame" Grid.Column="0" Grid.Row="1" />
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Grid.ColumnSpan="2" >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
 
-        <Frame Name="InnerFrame"  Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Stretch"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+            </Grid.RowDefinitions>
+
+
+
+
+
+            <Button Style="{StaticResource MyButtonStyle}" Name="Donuts" Grid.Column="0" Height="100"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Donuts_Click">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/donut.png" Height="18"/>
+                        <TextBlock Text="Donuts" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button Style="{StaticResource MyButtonStyle}" Name="Coffee" Grid.Column="1" Height="100"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Coffee_Click">
+            <Button.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/coffee.png" Height="18"/>
+                    <TextBlock Text="Coffee" Margin="10,0,0,0"/>
+                </StackPanel>
+            </Button.Content>
+            </Button>
+
+
+            <Button Style="{StaticResource MyButtonStyle}" Name="Schedule" Grid.Column="2" Height="100"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Schedule_Click">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/time.png" Height="18"/>
+                        <TextBlock Text="Schedule" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button Style="{StaticResource MyButtonStyle}" Name="Complete" Grid.Column="3" Height="100"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Complete_Click">
+            <Button.Content>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/tool.png" Height="18"/>
+                    <TextBlock Text="Complete" Margin="10,0,0,0"/>
+                </StackPanel>
+            </Button.Content>
+            </Button>
+            
+
+        </Grid>
+
+
     </Grid>
 </Page>

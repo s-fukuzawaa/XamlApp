@@ -116,10 +116,14 @@
     <None Include="Lab5_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\coffee.png" />
+    <Content Include="Assets\donut.png" />
     <Content Include="Assets\gnc.png" />
     <Content Include="Assets\gnw.png" />
     <Content Include="Assets\table.jpg" />
     <Content Include="Assets\tag.jpg" />
+    <Content Include="Assets\time.png" />
+    <Content Include="Assets\tool.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

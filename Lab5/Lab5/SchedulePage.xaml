@@ -22,8 +22,8 @@
         <Image Source="Assets/gnw.png" Grid.Row="0"  Stretch="None" HorizontalAlignment="Left" />
 
         
-        <TextBlock Grid.Row="1"  Text="Pickup:" VerticalAlignment="Center" Margin="10,0,0,0" Style="{StaticResource MyTextStyle}"/>
-        <CalendarDatePicker Grid.Row="1" Grid.Column="1" PlaceholderText="select a date" />
+        <TextBlock Grid.Row="1"  Text="Pickup:" VerticalAlignment="Center" Margin="10,20,0,0" Style="{StaticResource MyTextStyle}"/>
+        <CalendarDatePicker Grid.Row="1" Grid.Column="1" PlaceholderText="select a date" Margin="0,20,0,0"/>
         <TimePicker Grid.Row="2" Grid.Column="1"  ClockIdentifier="12HourClock" Style="{StaticResource MyTimeStyle}" Margin="0,10,0,0"/>
 
 

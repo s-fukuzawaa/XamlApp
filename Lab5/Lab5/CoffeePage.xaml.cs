@@ -31,26 +31,26 @@ namespace Lab5
 
         private void Dark_Click(object sender, RoutedEventArgs e)
         {
-            RoastText.Text = "Dark + ";
+            RoastText.Text = " Dark + ";
         }
 
         private void Medium_Click(object sender, RoutedEventArgs e)
         {
-            RoastText.Text = "Medium + ";
+            RoastText.Text = " Medium + ";
         }
 
         private void Sugar_Click(object sender, RoutedEventArgs e)
         {
-            SweetenerText.Text = "Sugar + ";
+            SweetenerText.Text = " Sugar + ";
         }
 
         private void Milk_Click(object sender, RoutedEventArgs e)
         {
-            CreamText.Text = "2% Milk";
+            CreamText.Text = " 2% Milk";
         }
         private void WMilk_Click(object sender, RoutedEventArgs e)
         {
-            CreamText.Text = "Whole Milk";
+            CreamText.Text = " Whole Milk";
         }
     }
 }
