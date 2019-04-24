@@ -9,18 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
    
-    <Grid Style="{StaticResource MyGridStyle}">
+    <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="66*" />
-                <ColumnDefinition Width="33*" />
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image Source="Assets/gnc.png" Grid.Row="0"  Grid.Column="1" Stretch="None" HorizontalAlignment="Left" />
+        <Image Source="Assets/tag.jpg" Grid.Row="1"  Grid.Column="1" Stretch="None" HorizontalAlignment="Left" Margin="20,20,20,20"/>
 
-        </Grid>
+    </Grid>
 </Page>

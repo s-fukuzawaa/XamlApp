@@ -8,7 +8,24 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Style="{StaticResource Schedule}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image Source="Assets/gnw.png" Grid.Row="0"  Stretch="None" HorizontalAlignment="Left" />
+
+        
+        <TextBlock Grid.Row="1"  Text="Pickup:" VerticalAlignment="Center" Margin="10,0,0,0" Style="{StaticResource MyTextStyle}"/>
+        <CalendarDatePicker Grid.Row="1" Grid.Column="1" PlaceholderText="select a date" />
+        <TimePicker Grid.Row="2" Grid.Column="1"  ClockIdentifier="12HourClock" Style="{StaticResource MyTimeStyle}" Margin="0,10,0,0"/>
+
 
     </Grid>
 </Page>
