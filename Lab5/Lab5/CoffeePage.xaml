@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    
+
 
     <Grid Style="{StaticResource Coffee}">
         <Grid.ColumnDefinitions>
@@ -22,20 +22,47 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Image Source="Assets/gnw.png" Grid.Row="0"  Grid.Column="1" Stretch="None" HorizontalAlignment="Left" />
+
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1">
             <Button Name="Menu" Content="Roast" Style="{StaticResource MyButtonStyle}" >
                 <Button.Flyout>
                     <MenuFlyout Placement="Bottom">
-                        <MenuFlyoutItem Text="None" />
-                        <MenuFlyoutItem Text="None" />
-                        <MenuFlyoutItem Text="None" />
+                        <MenuFlyoutItem   Text="None"  />
+                        <MenuFlyoutItem Name="Dark" Text="Dark" Click="Dark_Click"/>
+                        <MenuFlyoutItem Name="Medium" Text="Medium" Click="Medium_Click"/>
                     </MenuFlyout>
 
                 </Button.Flyout>
             </Button>
+
+
+            <Button Name="Menu2" Content="Sweetener" Style="{StaticResource MyButtonStyle}" Margin="10,0,0,0">
+                <Button.Flyout>
+                    <MenuFlyout Placement="Top">
+                        <MenuFlyoutItem  Text="None" />
+                        <MenuFlyoutItem Name="Sugar" Text="Sugar" Click="Sugar_Click"/>
+                    </MenuFlyout>
+
+                </Button.Flyout>
+            </Button>
+            <Button Name="Menu3" Content="Cream" Style="{StaticResource MyButtonStyle}" Margin="10,0,0,0">
+                <Button.Flyout>
+                    <MenuFlyout Placement="Top">
+                        <MenuFlyoutItem Text="None" />
+                        <MenuFlyoutItem Name="Milk" Text="2% Milk" Click="Milk_Click" />
+                        <MenuFlyoutItem Name="WMilk" Text="Whole Milk" Click="WMilk_Click"/>
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Margin="0,20,0,0" >
+            <TextBlock Text="Coffee:" Style="{StaticResource MyTextStyle}"/>
+            <TextBlock Name="RoastText" Text="" Style="{StaticResource MyTextStyle}"/>
+            <TextBlock Name="SweetenerText" Text="" Style="{StaticResource MyTextStyle}"/>
+            <TextBlock Name="CreamText" Text="" Style="{StaticResource MyTextStyle}"/>
+
         </StackPanel>
         
     </Grid>
-    
-    
 </Page>
