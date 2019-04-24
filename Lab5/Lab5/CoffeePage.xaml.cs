@@ -26,5 +26,10 @@ namespace Lab5
         {
             this.InitializeComponent();
         }
+
+        private void None_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

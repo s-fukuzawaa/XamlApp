@@ -9,6 +9,46 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid Style="{StaticResource Donut}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="66*" />
+                <ColumnDefinition Width="33*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Image Source="Assets/gnw.png" Grid.Row="0"  Grid.Column="1" Stretch="None" HorizontalAlignment="Left" />
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
+                <TextBlock Text="Original Glazed Count:" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource MyTextStyle}"/>
+                <Slider Name="Coffeebar"
+                     Margin="28,0,0,0"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     Width="200"
+                     Minimum="0"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Center"
+                     Maximum="24" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
+                <TextBlock Text="Speedway Special Count:" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource MyTextStyle}"/>
+                <Slider Name="Coffeebar2"
+                     Margin="10,5,0,0"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     Width="200"
+                     Minimum="0"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Center"
+                     Maximum="24" />
+            </StackPanel>
+
+
+        </Grid>
 
     </Grid>
 </Page>

@@ -8,7 +8,34 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    
 
+    <Grid Style="{StaticResource Coffee}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="66*" />
+            <ColumnDefinition Width="33*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image Source="Assets/gnw.png" Grid.Row="0"  Grid.Column="1" Stretch="None" HorizontalAlignment="Left" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1">
+            <Button Name="Menu" Content="Roast" Style="{StaticResource MyButtonStyle}" >
+                <Button.Flyout>
+                    <MenuFlyout Placement="Bottom">
+                        <MenuFlyoutItem Text="None" />
+                        <MenuFlyoutItem Text="None" />
+                        <MenuFlyoutItem Text="None" />
+                    </MenuFlyout>
+
+                </Button.Flyout>
+            </Button>
+        </StackPanel>
+        
     </Grid>
+    
+    
 </Page>

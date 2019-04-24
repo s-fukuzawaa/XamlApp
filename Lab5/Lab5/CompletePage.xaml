@@ -9,8 +9,18 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
    
-    <Grid>
-        
-        
-    </Grid>
+    <Grid Style="{StaticResource MyGridStyle}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="66*" />
+                <ColumnDefinition Width="33*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+        </Grid>
 </Page>
