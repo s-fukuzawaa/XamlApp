@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,28 +23,16 @@ namespace Lecture
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public MainPage()
-        {
-            this.InitializeComponent();
-        }
-
-       
+            private ObservableCollection<Book> Books;
+            public MainPage()
+            {
+                this.InitializeComponent();
+                Books = BookManager.GetBooks();
+            }
         
 
-        private void MyCalendarView_SelectedDatesChanged(CalendarView sender, CalendarViewSelectedDatesChangedEventArgs args)
-        {
-            var selectedDates = sender.SelectedDates
-                .Select(p => p.Date.Month.ToString() + "/" + p.Date.Day.ToString())
-                .ToArray();
 
-            var values = string.Join(", ", selectedDates);
-            CalendarViewResultTextBlock.Text = values;
-        }
 
-        private void InnerFlyoutButton_Click(object sender, RoutedEventArgs e)
-        {
-            MyFlyout.Hide();
-        }
 
         private string[] selectionItems = new string[]
             {"Ferdinand", "Frank", "Frida", "Nigel", "Tag", "Tanya", "Tanner", "Todd"};
@@ -57,5 +46,13 @@ namespace Lecture
 
             autoSuggestBox.ItemsSource = filtered;
         }
+
+        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var book = (Book)e.ClickedItem;
+            ResultTextBlock.Text = "You selected " + book.Title;
+        }
+
+        
     }
 }
