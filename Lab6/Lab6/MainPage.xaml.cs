@@ -1,4 +1,7 @@
-﻿using Lab6.ViewModels;
+﻿using Lab6.Models;
+using System.Threading.Tasks;
+
+using Lab6.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,10 +35,31 @@ namespace Lab6
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            ViewModel.Description = "Dummy Description";
-            ViewModel.LocationName = "Dummy Location";
-            ViewModel.Temperature = "Dummy Temperature";
-            ViewModel.ImageUrl = "https://icons.wxug.com/i/c/c/snow.gif";
+            ViewModel.Description = "";
+            ViewModel.LocationName = "";
+            ViewModel.Temperature = "Loading...";
+            ViewModel.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/3/3a/Gray_circles_rotate.gif";
+
+            await UpdateWeather("Seattle,WA");
+
+        }
+        private async Task UpdateWeather(string cityLink)
+        {
+            WeatherRetriever weatherRetriever = new WeatherRetriever();
+            ObservationsRootObject observationsRoot = await weatherRetriever.GetObservations(cityLink);
+
+            ViewModel.Description = observationsRoot.response.ob.weatherShort;
+            ViewModel.LocationName =
+                observationsRoot.response.place.name + ", " +
+                observationsRoot.response.place.state + " " +
+                observationsRoot.response.place.country;
+            ViewModel.Temperature = "" + observationsRoot.response.ob.tempF;
+            ViewModel.ImageUrl = GetIconURLFromName(observationsRoot.response.ob.icon);
+
+        }
+        private string GetIconURLFromName(string iconName)
+        {
+            return "https://cdn.aerisapi.com/wxblox/icons/" + iconName;
         }
     }
 }
