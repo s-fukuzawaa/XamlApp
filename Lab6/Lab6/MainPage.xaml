@@ -5,9 +5,10 @@
     xmlns:local="using:Lab6"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:Lab6.ViewModels"
     mc:Ignorable="d">
 
-    <StackPanel Background="LightBlue">
+    <StackPanel Background="LightBlue" Orientation="Vertical">
         <StackPanel VerticalAlignment="Center">
 
             <AutoSuggestBox Name="LocationAutoSuggestBox" HorizontalAlignment="Center"
@@ -27,6 +28,10 @@
                        FontSize="36" Foreground="White" HorizontalAlignment="Center" />
             <TextBlock Name="LocationNameTextBlock" Text="{x:Bind ViewModel.LocationName, Mode=OneWay}"
                        FontSize="24" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap" />
-        </StackPanel> 
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            
+        </StackPanel>
     </StackPanel>
+    
 </Page>
