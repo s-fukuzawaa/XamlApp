@@ -72,7 +72,7 @@ namespace Lab6
         private async Task UpdateForecast(string cityLink)
         {
             WeatherRetriever weatherRetriever = new WeatherRetriever();
-
+            
             ForecastRootObject forecastRoot = await weatherRetriever.GetForecast(cityLink);
 
             foreach (Models.Forecast.Response resp in forecastRoot.response)
