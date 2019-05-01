@@ -60,7 +60,7 @@ namespace Lab6
             ViewModel.Temperature = "" + observationsRoot.response.ob.tempF;
             ViewModel.ImageUrl = GetIconURLFromName(observationsRoot.response.ob.icon);
 
-            ViewModel2.TempRange = forecastRoot.response.            
+                     
         }
         private string GetIconURLFromName(string iconName)
         {
