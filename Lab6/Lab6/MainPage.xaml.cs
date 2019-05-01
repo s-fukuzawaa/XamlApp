@@ -75,6 +75,8 @@ namespace Lab6
             
             ForecastRootObject forecastRoot = await weatherRetriever.GetForecast(cityLink);
 
+            ViewModel.Forecast.Clear();
+
             foreach (Models.Forecast.Response resp in forecastRoot.response)
             {
                 List<Period> periods = resp.periods;

@@ -35,12 +35,12 @@
                     <StackPanel >
                         <TextBlock Name="Date" Text="{x:Bind Date, Mode=OneWay}" FontSize="24" HorizontalAlignment="Center" />
                         <TextBlock Name="TempRange" Text="{x:Bind TempRange, Mode=OneWay}" FontSize="24" HorizontalAlignment="Center"/>
-                        <Image Name="ForeImage" Width="200" Height="200" HorizontalAlignment="Center">
+                        <Image Name="ForeImage" Width="150" Height="150" HorizontalAlignment="Center">
                             <Image.Source>
                                 <BitmapImage UriSource="{x:Bind Image, Mode=OneWay}" />
                             </Image.Source>
                         </Image>
-                        <TextBlock Name="DescriDay" Text="{x:Bind DescriDay, Mode=OneWay}" FontSize="16"  HorizontalAlignment="Center"/>
+                        <TextBlock Name="DescriDay" Text="{x:Bind DescriDay, Mode=OneWay}" FontSize="16"  HorizontalAlignment="Center" />
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
