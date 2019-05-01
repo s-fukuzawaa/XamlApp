@@ -8,8 +8,8 @@ namespace Lab6.Models.AutoComplete
 {
     public class Loc
     {
-        public double lat { get; set; }
-        public double @long { get; set; }
+        public double? lat { get; set; }
+        public double? @long { get; set; }
     }
 
     public class Place
@@ -27,12 +27,12 @@ namespace Lab6.Models.AutoComplete
 
     public class Profile
     {
-        public int elevM { get; set; }
-        public int elevFT { get; set; }
-        public int pop { get; set; }
+        public double?elevM { get; set; }
+        public double?elevFT { get; set; }
+        public double?pop { get; set; }
         public string tz { get; set; }
         public string tzname { get; set; }
-        public int tzoffset { get; set; }
+        public double?tzoffset { get; set; }
         public bool isDST { get; set; }
         public List<string> wxzone { get; set; }
         public List<string> firezone { get; set; }

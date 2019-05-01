@@ -29,7 +29,7 @@ namespace Lab6
     public sealed partial class MainPage : Page
     {
         public MainPageViewModel ViewModel { get; set; } = new MainPageViewModel();
-        public ForecastDayViewModel ViewModel2 { get; set; }= new ForecastDayViewModel();
+        
 
         public MainPage()
         {
@@ -44,13 +44,13 @@ namespace Lab6
             ViewModel.ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/3/3a/Gray_circles_rotate.gif";
 
             await UpdateWeather("Seattle,WA");
+            await UpdateForecast("Seattle,WA");
 
         }
         private async Task UpdateWeather(string cityLink)
         {
             WeatherRetriever weatherRetriever = new WeatherRetriever();
             ObservationsRootObject observationsRoot = await weatherRetriever.GetObservations(cityLink);
-            ForecastRootObject forecastRoot = await weatherRetriever.GetForecast(cityLink);
 
             ViewModel.Description = observationsRoot.response.ob.weatherShort;
             ViewModel.LocationName =
@@ -60,11 +60,40 @@ namespace Lab6
             ViewModel.Temperature = "" + observationsRoot.response.ob.tempF;
             ViewModel.ImageUrl = GetIconURLFromName(observationsRoot.response.ob.icon);
 
-                     
+          
+
         }
         private string GetIconURLFromName(string iconName)
         {
             return "https://cdn.aerisapi.com/wxblox/icons/" + iconName;
+        }
+
+
+        private async Task UpdateForecast(string cityLink)
+        {
+            WeatherRetriever weatherRetriever = new WeatherRetriever();
+
+            ForecastRootObject forecastRoot = await weatherRetriever.GetForecast(cityLink);
+
+            foreach (Models.Forecast.Response resp in forecastRoot.response)
+            {
+                List<Period> periods = resp.periods;
+                
+                foreach(Period input in periods)
+                {
+                    ForecastDayViewModel ViewModel2 = new ForecastDayViewModel();
+                    ViewModel2.TempRange = input.maxTempF + "-" + input.minTempF;
+                    ViewModel2.Date = input.dateTimeISO.Date.Month+"/"+input.dateTimeISO.Day;
+                    ViewModel2.DescriDay = input.weather;
+                    ViewModel2.Image = GetIconURLFromName(input.icon);
+
+                    ViewModel.Forecast.Add(ViewModel2);
+                    
+                    
+                }
+                
+            }
+
         }
 
 
@@ -100,6 +129,8 @@ namespace Lab6
             if(args.ChosenSuggestion != null)
             {
                 await UpdateWeather((string)args.ChosenSuggestion);
+                await UpdateForecast((string)args.ChosenSuggestion);
+
             }
             else
             {
