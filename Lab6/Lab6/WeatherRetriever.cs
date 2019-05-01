@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Lab6.Models.Forecast;
 
 namespace Lab6
 {
@@ -27,6 +28,19 @@ namespace Lab6
 
             return observations;
                 
+        }
+
+        public async Task<ForecastRootObject> GetForecast(string cityLink)
+        {
+            HttpClient httpClient = new HttpClient();
+
+            string apiUrl = $"https://api.aerisapi.com/forecasts/{cityLink}?limit=4&filter=day&client_id={apiKey}&client_secret={secret}";
+            string responseString = await httpClient.GetStringAsync(apiUrl);
+
+            ForecastRootObject forecast = JsonConvert.DeserializeObject<ForecastRootObject>(responseString);
+
+            return forecast;
+
         }
 
         public async Task<AutoCompleteRootObject> GetSuggestions(string enteredStr)

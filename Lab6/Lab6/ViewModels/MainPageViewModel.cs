@@ -17,11 +17,18 @@ namespace Lab6.ViewModels
         public string LocationName { get; set; }
         public string Temperature { get; set; }
         public string Description { get; set; }
+<<<<<<< HEAD
         public string ImageUrl { get; set; }
 
         public ObservableCollection<ForecastDayViewModel> Forecast { get; }
             = new ObservableCollection<ForecastDayViewModel>();
+=======
+        public string ImageUrl { get; set; } 
+>>>>>>> 86cdfb0008877e6f8c58898cdb4ffbcb844a0919
 
         public List<string> AutoCompleteNames { get; set; }
+
+        public ObservableCollection<ForecastDayViewModel> Forecast { get; }
+        = new ObservableCollection<ForecastDayViewModel>();
     }
 }

@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Lab6.Models.AutoComplete;
+using Lab6.Models.Forecast;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -28,6 +29,7 @@ namespace Lab6
     public sealed partial class MainPage : Page
     {
         public MainPageViewModel ViewModel { get; set; } = new MainPageViewModel();
+        public ForecastDayViewModel ViewModel2 { get; set; }= new ForecastDayViewModel();
 
         public MainPage()
         {
@@ -48,6 +50,7 @@ namespace Lab6
         {
             WeatherRetriever weatherRetriever = new WeatherRetriever();
             ObservationsRootObject observationsRoot = await weatherRetriever.GetObservations(cityLink);
+            ForecastRootObject forecastRoot = await weatherRetriever.GetForecast(cityLink);
 
             ViewModel.Description = observationsRoot.response.ob.weatherShort;
             ViewModel.LocationName =
@@ -57,6 +60,7 @@ namespace Lab6
             ViewModel.Temperature = "" + observationsRoot.response.ob.tempF;
             ViewModel.ImageUrl = GetIconURLFromName(observationsRoot.response.ob.icon);
 
+                     
         }
         private string GetIconURLFromName(string iconName)
         {
