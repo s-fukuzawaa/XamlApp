@@ -29,9 +29,21 @@
             <TextBlock Name="LocationNameTextBlock" Text="{x:Bind ViewModel.LocationName, Mode=OneWay}"
                        FontSize="24" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap" />
         </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            
-        </StackPanel>
+        <GridView ItemsSource="{x:Bind ViewModel.Forecast}">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="data:ForecastDayViewModel">
+                    <StackPanel>
+                        <TextBlock Name="TempRange" Text="{x:Bind TempRange, Mode=OneWay}"/>
+                        <Image Name="ForeImage" Width="50" Height="40" HorizontalAlignment="Center">
+                            <Image.Source>
+                                <BitmapImage UriSource="{x:Bind Image, Mode=OneWay}" />
+                            </Image.Source>
+                        </Image>
+                        <TextBlock Name="DescriDay" Text="{x:Bind DescriDay, Mode=OneWay}" />
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
     </StackPanel>
     
 </Page>
