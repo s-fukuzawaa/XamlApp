@@ -9,10 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Image Name="resultImage" Width="200" Height="200">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Name="resultImage" Grid.Row="0" Stretch="Fill">
             <Image.Source>
                 <BitmapImage UriSource="{x:Bind ViewModel.ImageUrl, Mode=OneWay}" />
             </Image.Source>
+           
         </Image>
     </Grid>
 </Page>

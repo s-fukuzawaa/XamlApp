@@ -12,6 +12,6 @@ namespace IndependentProject.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public string ImageUrl { get; set; }
+        public string ImageUrl { get; set; } = "http://blah.com/blha.jpg";
     }
 }
