@@ -25,6 +25,7 @@ namespace IndependentProject
         public MainPage()
         {
             this.InitializeComponent();
+            Inner.Navigate(typeof(Welcome));
         }
     }
 }

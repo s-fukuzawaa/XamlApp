@@ -10,7 +10,8 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        
-        
+        <Frame Name="Inner" />
+
+
     </Grid>
 </Page>

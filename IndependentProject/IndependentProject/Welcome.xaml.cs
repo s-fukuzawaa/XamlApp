@@ -13,6 +13,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using IndependentProject.ViewModels;
+using IndependentProject.Models;
+using System.Threading.Tasks;
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace IndependentProject
@@ -22,7 +25,7 @@ namespace IndependentProject
     /// </summary>
     public sealed partial class Welcome : Page
     {
-        public WelcomePageViewModel Viewmodel { get; set; } = new WelcomePageViewModel();
+        public WelcomePageViewModel ViewModel { get; set; } = new WelcomePageViewModel();
 
         public Welcome()
         {
@@ -31,7 +34,17 @@ namespace IndependentProject
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            Viewmodel.ImageUrl=
+           await UpdateAPOD();
         }
+        private async Task UpdateAPOD()
+        {
+            APODRetriever apodRetriever = new APODRetriever();
+            APODRootObject apodRoot = await apodRetriever.GetAPOD();
+
+            ViewModel.ImageUrl = apodRoot.url;
+
+        }
+
+        
     }
 }
