@@ -8,6 +8,13 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Page.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush" Color="White" />
+        </ResourceDictionary>
+    </Page.Resources>
+    
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -18,5 +25,8 @@
             </Image.Source>
            
         </Image>
+        
+        <TextBlock Grid.Row="0" Text="Welcome to LASTRON!" FontSize="50"  Foreground="{StaticResource Brush}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+       
     </Grid>
 </Page>

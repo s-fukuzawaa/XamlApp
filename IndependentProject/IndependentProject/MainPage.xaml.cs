@@ -25,7 +25,33 @@ namespace IndependentProject
         public MainPage()
         {
             this.InitializeComponent();
-            Inner.Navigate(typeof(Welcome));
+            InnerFrame.Navigate(typeof(Welcome));
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (EPICListBoxItem.IsSelected)
+            {
+                
+                InnerFrame.Navigate(typeof(EPIC));
+            }
+            else if (LearnYourselfListBoxItem.IsSelected)
+            {
+               
+                InnerFrame.Navigate(typeof(Learn_Yourself));
+            }
+            else if (WelcomeListBoxItem.IsSelected)
+            {
+
+                InnerFrame.Navigate(typeof(Welcome));
+            }
+
+        }
+
+        
     }
 }
