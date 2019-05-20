@@ -12,7 +12,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Image Name="resultImage" Grid.Row="0" Stretch="Fill">
+        <Image Name="resultImage" Grid.Row="0" Stretch="UniformToFill">
             <Image.Source>
                 <BitmapImage UriSource="{x:Bind ViewModel.ImageUrl, Mode=OneWay}" />
             </Image.Source>
