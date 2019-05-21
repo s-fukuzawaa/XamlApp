@@ -8,7 +8,30 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Page.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush" Color="DimGray" />
+        </ResourceDictionary>
+    </Page.Resources>
+    
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Learn Yourself" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="70" />
+            <ComboBox PlaceholderText="Select Solar planet from drop down list" FontSize="35" Foreground="{StaticResource Brush}" HorizontalAlignment="Center" SelectionChanged="ComboBox_SelectionChanged" Margin="0,20,0,0">
+                <ComboBoxItem Content="Mercury"/>
+                <ComboBoxItem Content="Venus"/>
+                <ComboBoxItem Content="Earth"/>
+                <ComboBoxItem Content="Mars" />
+                <ComboBoxItem Content="Jupiter"/>
+                <ComboBoxItem Content="Saturn"/>
+                <ComboBoxItem Content="Uranus"/>
+                <ComboBoxItem Content="Neptune"/>
+            </ComboBox>
+                    
+        </StackPanel>
     </Grid>
 </Page>
