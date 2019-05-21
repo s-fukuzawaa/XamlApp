@@ -118,6 +118,15 @@
     <None Include="IndependentProject_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\earth.jpg" />
+    <Content Include="Assets\jupiter.jpg" />
+    <Content Include="Assets\mars.jpg" />
+    <Content Include="Assets\mercury.jpg" />
+    <Content Include="Assets\neptune.jpg" />
+    <Content Include="Assets\saturn.jpg" />
+    <Content Include="Assets\uranus.jpg" />
+    <Content Include="Assets\venus.png" />
+    <Content Include="EPICCollection.txt" />
     <Content Include="FodyWeavers.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

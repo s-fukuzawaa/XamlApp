@@ -26,5 +26,24 @@ namespace IndependentProject
         {
             this.InitializeComponent();
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(ComboBoxResultTextBlock != null)
+            {
+                ComboBox combo = (ComboBox)sender;
+                ComboBoxItem item = (ComboBoxItem)combo.SelectedItem;
+
+                if(item.Content.Equals("Mercury"))
+                {
+                    ComboBoxResultTextBlock.Text = item.Content.ToString();
+                }
+                if (item.Content.Equals("Venus"))
+                {
+                    ComboBoxResultTextBlock.Text = item.Content.ToString();
+                    ComboBoxResultImage.Source.Equals("Assets/venus.jpg");
+                }
+            }
+        }
     }
 }

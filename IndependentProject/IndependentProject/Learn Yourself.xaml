@@ -31,7 +31,11 @@
                 <ComboBoxItem Content="Uranus"/>
                 <ComboBoxItem Content="Neptune"/>
             </ComboBox>
-                    
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Name="ComboBoxResultTextBlock" />
+                <Image Name="ComboBoxResultImage"></Image>
+            </StackPanel>
+
         </StackPanel>
     </Grid>
 </Page>
