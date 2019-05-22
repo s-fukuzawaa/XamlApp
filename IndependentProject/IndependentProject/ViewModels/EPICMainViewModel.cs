@@ -4,17 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 
 namespace IndependentProject.ViewModels
 {
-
-    public class EPICPageViewModel : INotifyPropertyChanged
+    public class EPICMainViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public string Image { get; set; }
-        public string date { get; set; }
-        
+        public ObservableCollection<EPICPageViewModel> EPICImages { get; } = new ObservableCollection<EPICPageViewModel>(); 
     }
 }

@@ -106,6 +106,7 @@
     <Compile Include="Models\APOD.cs" />
     <Compile Include="Models\EPIC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\EPICMainViewModel.cs" />
     <Compile Include="ViewModels\EPICPageViewModel.cs" />
     <Compile Include="ViewModels\WelcomePageViewModel.cs" />
     <Compile Include="Welcome.xaml.cs">
@@ -127,7 +128,6 @@
     <Content Include="Assets\saturn.jpg" />
     <Content Include="Assets\uranus.jpg" />
     <Content Include="Assets\venus.png" />
-    <Content Include="EPICCollection.txt" />
     <Content Include="FodyWeavers.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using IndependentProject.Models;
+using System.Threading.Tasks;
+
+using IndependentProject.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +26,26 @@ namespace IndependentProject
     /// </summary>
     public sealed partial class EPIC : Page
     {
+        public EPICMainViewModel ViewModel { get; set; } = new EPICMainViewModel();
+
+
         public EPIC()
         {
             this.InitializeComponent();
         }
+
+        private async Task UpdateImages()
+        {
+            EPICRetriever epicRetriever = new EPICRetriever();
+            IEnumerable<EPICRootObject> epicRoot = await epicRetriever.GetEPIC();
+
+            foreach(EPICRootObject input in epicRoot)
+            {
+                EPICMainViewModel ViewModel2 = new EPICMainViewModel();
+            }
+        }
+
+
+
     }
 }
