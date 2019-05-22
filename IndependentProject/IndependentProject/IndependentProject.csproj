@@ -96,6 +96,7 @@
     <Compile Include="EPIC.xaml.cs">
       <DependentUpon>EPIC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EPICRetriever.cs" />
     <Compile Include="Learn Yourself.xaml.cs">
       <DependentUpon>Learn Yourself.xaml</DependentUpon>
     </Compile>
