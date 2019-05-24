@@ -37,11 +37,38 @@ namespace IndependentProject
                 if(item.Content.Equals("Mercury"))
                 {
                     ComboBoxResultTextBlock.Text = item.Content.ToString();
+                    bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/mercury.jpg");
+
                 }
                 if (item.Content.Equals("Venus"))
                 {
                     ComboBoxResultTextBlock.Text = item.Content.ToString();
-                    ComboBoxResultImage.Source.Equals("Assets/venus.jpg");
+                    bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/venus.jpg");
+                }
+                if (item.Content.Equals("Mars"))
+                {
+                    ComboBoxResultTextBlock.Text = item.Content.ToString();
+                    bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/mars.jpg");
+                }
+                if (item.Content.Equals("Jupiter"))
+                {
+                    ComboBoxResultTextBlock.Text = item.Content.ToString();
+                    bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/jupiter.jpg");
+                }
+                if (item.Content.Equals("Neptune"))
+                {
+                    ComboBoxResultTextBlock.Text = item.Content.ToString();
+                    bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/neptune.jpg");
+                }
+                if (item.Content.Equals("Saturn"))
+                {
+                    ComboBoxResultTextBlock.Text = item.Content.ToString();
+                    bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/saturn.jpg");
+                }
+                if (item.Content.Equals("Uranus"))
+                {
+                    ComboBoxResultTextBlock.Text = item.Content.ToString();
+                    bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/uranus.jpg");
                 }
             }
         }

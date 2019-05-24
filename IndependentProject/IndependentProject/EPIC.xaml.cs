@@ -69,6 +69,8 @@ namespace IndependentProject
                 count--;
             }
             string ImageUrl = ViewModel.EPICInfos[count].Image;
+            Url.UriSource = new Uri(ImageUrl);
+
         }
         private void Next_Click(object sender, RoutedEventArgs e)
         {
@@ -81,6 +83,9 @@ namespace IndependentProject
                 count++;
             }
             string ImageUrl = ViewModel.EPICInfos[count].Image;
+            Url.UriSource = new Uri(ResultImage.BaseUri,ImageUrl);
+
+
         }
     }
 }
