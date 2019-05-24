@@ -12,7 +12,8 @@ namespace IndependentProject.ViewModels
     public class EPICMainViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
-        public ObservableCollection<EPICPageViewModel> EPICImages { get; } = new ObservableCollection<EPICPageViewModel>(); 
+        
+        public EPICPageViewModel[] EPICInfos { get; set; } = new EPICPageViewModel[19];
+        
     }
 }

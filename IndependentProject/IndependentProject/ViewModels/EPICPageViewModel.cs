@@ -14,7 +14,7 @@ namespace IndependentProject.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
 
         public string Image { get; set; }
-        public string date { get; set; }
+        public string[] date { get; set; } = new string[3];
         
     }
 }
