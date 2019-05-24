@@ -69,11 +69,15 @@ namespace IndependentProject
                 count--;
             }
             string ImageUrl = ViewModel.EPICInfos[count].Image;
-            Url.UriSource = new Uri(ImageUrl);
+                        Url.UriSource = new Uri(ResultImage.BaseUri,ImageUrl);
+            Url.UriSource = new Uri(ResultImage.BaseUri, ImageUrl);
 
         }
         private void Next_Click(object sender, RoutedEventArgs e)
         {
+            
+            string ImageUrl = ViewModel.EPICInfos[count].Image;
+            Url.UriSource = new Uri(ResultImage.BaseUri,ImageUrl);
             if (count == 18)
             {
                 count = 0;
@@ -82,9 +86,6 @@ namespace IndependentProject
             {
                 count++;
             }
-            string ImageUrl = ViewModel.EPICInfos[count].Image;
-            Url.UriSource = new Uri(ResultImage.BaseUri,ImageUrl);
-
 
         }
     }
