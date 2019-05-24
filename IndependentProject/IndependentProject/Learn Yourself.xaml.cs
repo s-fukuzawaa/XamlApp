@@ -70,7 +70,13 @@ namespace IndependentProject
                     ComboBoxResultTextBlock.Text = item.Content.ToString();
                     bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/uranus.jpg");
                 }
+                if (item.Content.Equals("Earth"))
+                {
+                    ComboBoxResultTextBlock.Text = item.Content.ToString();
+                    bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/earth.jpg");
+                }
             }
         }
+        }
     }
-}
+

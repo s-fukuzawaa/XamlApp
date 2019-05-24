@@ -32,6 +32,7 @@ namespace IndependentProject
         public EPIC()
         {
             this.InitializeComponent();
+            UpdateImages();
         }
 
         private async Task UpdateImages()
@@ -70,14 +71,14 @@ namespace IndependentProject
             }
             string ImageUrl = ViewModel.EPICInfos[count].Image;
                         Url.UriSource = new Uri(ResultImage.BaseUri,ImageUrl);
-            Url.UriSource = new Uri(ResultImage.BaseUri, ImageUrl);
+            Url.UriSource = new Uri((string)ImageUrl);
 
         }
         private void Next_Click(object sender, RoutedEventArgs e)
         {
             
             string ImageUrl = ViewModel.EPICInfos[count].Image;
-            Url.UriSource = new Uri(ResultImage.BaseUri,ImageUrl);
+            Url.UriSource = new Uri((string)ImageUrl);
             if (count == 18)
             {
                 count = 0;
