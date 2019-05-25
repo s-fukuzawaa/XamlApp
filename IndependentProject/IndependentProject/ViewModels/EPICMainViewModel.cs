@@ -13,7 +13,7 @@ namespace IndependentProject.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
         
-        public EPICPageViewModel[] EPICInfos { get; set; } = new EPICPageViewModel[19];
+        public EPICPageViewModel[] EPICInfos { get; set; }
         
     }
 }

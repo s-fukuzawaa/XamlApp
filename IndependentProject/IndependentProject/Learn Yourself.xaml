@@ -31,15 +31,15 @@
                 <ComboBoxItem Content="Uranus"/>
                 <ComboBoxItem Content="Neptune"/>
             </ComboBox>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Name="ComboBoxResultTextBlock" />
-                <Image Name="ComboBoxResultImage">
-                    <Image.Source>
-                        <BitmapImage x:Name="bit"></BitmapImage>
-                    </Image.Source>
-                </Image>
-            </StackPanel>
-
+            
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock HorizontalTextAlignment="Center" Width="500" Height="500" FontSize="25" Grid.Row="1" Name="ComboBoxResultTextBlock"  TextAlignment="Center" TextWrapping="Wrap"/>
+            <Image Name="ComboBoxResultImage" Width="500" Height="500">
+                <Image.Source>
+                    <BitmapImage x:Name="bit"></BitmapImage>
+                </Image.Source>
+            </Image>
         </StackPanel>
     </Grid>
 </Page>

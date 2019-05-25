@@ -32,15 +32,26 @@ namespace IndependentProject
         public EPIC()
         {
             this.InitializeComponent();
-            UpdateImages();
         }
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            
+            await UpdateImages();
 
+        }
         private async Task UpdateImages()
         {
             EPICRetriever epicRetriever = new EPICRetriever();
             IEnumerable<EPICRootObject> epicRoot = await epicRetriever.GetEPIC();
-            int num = 0;
-            foreach(EPICRootObject input in epicRoot)
+            int num =0;
+            foreach (EPICRootObject input in epicRoot)
+            {
+                num++;
+            }
+            int count = 0;
+            ViewModel.EPICInfos = new EPICPageViewModel[num];
+
+            foreach (EPICRootObject input in epicRoot)
             {
                 EPICPageViewModel ViewModel2 = new EPICPageViewModel();
                 ViewModel2.date[0] = input.date.Substring(0, 4);
@@ -49,7 +60,7 @@ namespace IndependentProject
                 ViewModel2.Image = GetImageURLFromNameDate(input.image, ViewModel2.date);
 
                 ViewModel.EPICInfos[num]=ViewModel2;
-                num++;
+                count++;
             }
         }
 
@@ -63,7 +74,7 @@ namespace IndependentProject
         { 
             if(count ==0 )
             {
-                count = 18;
+                count = ViewModel.EPICInfos.Length-1;
             }
             else
             {
@@ -79,7 +90,7 @@ namespace IndependentProject
             
             string ImageUrl = ViewModel.EPICInfos[count].Image;
             Url.UriSource = new Uri((string)ImageUrl);
-            if (count == 18)
+            if (count == ViewModel.EPICInfos.Length - 1)
             {
                 count = 0;
             }
