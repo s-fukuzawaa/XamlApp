@@ -5,4 +5,9 @@
     xmlns:local="using:IndependentProject"
     RequestedTheme="Light">
 
+    <Application.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush" Color="LightGray" />
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

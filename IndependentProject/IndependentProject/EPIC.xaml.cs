@@ -37,29 +37,31 @@ namespace IndependentProject
         {
             
             await UpdateImages();
+            this.count = 0;
+
+            string ImageUrl = ViewModel.EPICInfos[this.count].Image;
+            Url.UriSource = new Uri((string)ImageUrl);
 
         }
         private async Task UpdateImages()
         {
             EPICRetriever epicRetriever = new EPICRetriever();
             IEnumerable<EPICRootObject> epicRoot = await epicRetriever.GetEPIC();
-            int num =0;
-            foreach (EPICRootObject input in epicRoot)
-            {
-                num++;
-            }
+            int num = epicRoot.Count();
+            
             int count = 0;
             ViewModel.EPICInfos = new EPICPageViewModel[num];
 
             foreach (EPICRootObject input in epicRoot)
             {
                 EPICPageViewModel ViewModel2 = new EPICPageViewModel();
-                ViewModel2.date[0] = input.date.Substring(0, 4);
-                ViewModel2.date[1] = input.date.Substring(5, 7);
-                ViewModel2.date[2] = input.date.Substring(8, 10);
+                String[] dates = input.date.Split('-');
+                ViewModel2.date[0] = dates[0];
+                ViewModel2.date[1] = dates[1];
+                ViewModel2.date[2] = dates[2].Substring(0,dates[2].IndexOf(" "));
                 ViewModel2.Image = GetImageURLFromNameDate(input.image, ViewModel2.date);
 
-                ViewModel.EPICInfos[num]=ViewModel2;
+                ViewModel.EPICInfos[count]=ViewModel2;
                 count++;
             }
         }
@@ -81,15 +83,11 @@ namespace IndependentProject
                 count--;
             }
             string ImageUrl = ViewModel.EPICInfos[count].Image;
-                        Url.UriSource = new Uri(ResultImage.BaseUri,ImageUrl);
             Url.UriSource = new Uri((string)ImageUrl);
 
         }
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            
-            string ImageUrl = ViewModel.EPICInfos[count].Image;
-            Url.UriSource = new Uri((string)ImageUrl);
             if (count == ViewModel.EPICInfos.Length - 1)
             {
                 count = 0;
@@ -98,6 +96,11 @@ namespace IndependentProject
             {
                 count++;
             }
+
+            string ImageUrl = ViewModel.EPICInfos[count].Image;
+
+            Url.UriSource = new Uri((string)ImageUrl);
+            
 
         }
     }
