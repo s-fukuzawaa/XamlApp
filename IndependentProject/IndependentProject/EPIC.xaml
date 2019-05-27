@@ -23,13 +23,13 @@ The DSCOVR spacecraft is located at the Earth-Sun Lagrange-1 (L-1) point giving 
 
         </StackPanel>
         <StackPanel Grid.Column="1" Orientation="Horizontal">
-            <Button Name="Back" Margin="20,0,20,0" FontFamily="Segoe MDL2 Assets" FontSize="18" Content="&#xE72B;" Click="Back_Click"></Button>
+            <Button Name="Back" Style="{StaticResource MyButtonStyle}" Margin="20,0,20,0" FontFamily="Segoe MDL2 Assets" FontSize="18" Content="&#xE72B;" Click="Back_Click"></Button>
             <Image Name="ResultImage"  Width="500" Height="500" HorizontalAlignment="Center">
                 <Image.Source>
                     <BitmapImage x:Name="Url"></BitmapImage>
                 </Image.Source>
             </Image>
-            <Button Name="Next" Margin="20,0,20,0" FontFamily="Segoe MDL2 Assets" FontSize="18" Content="&#xE72A;" Click="Next_Click"></Button>
+            <Button Name="Next" Style="{StaticResource MyButtonStyle}" Margin="20,0,20,0" FontFamily="Segoe MDL2 Assets" FontSize="18" Content="&#xE72A;" Click="Next_Click"></Button>
 
         </StackPanel>
     </Grid>

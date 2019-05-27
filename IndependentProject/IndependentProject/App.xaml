@@ -8,6 +8,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <SolidColorBrush x:Key="Brush" Color="LightGray" />
+            <Style TargetType="Button" x:Key="MyButtonStyle">
+                <Setter Property="Background" Value="LightGray"/>
+                <Setter Property="IsHoldingEnabled" Value="True" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
