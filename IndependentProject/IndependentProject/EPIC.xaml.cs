@@ -36,14 +36,14 @@ namespace IndependentProject
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             
-            await UpdateImages();
+            await UpdateImagesCoords();
             this.count = 0;
 
             string ImageUrl = ViewModel.EPICInfos[this.count].Image;
             Url.UriSource = new Uri((string)ImageUrl);
 
         }
-        private async Task UpdateImages()
+        private async Task UpdateImagesCoords()
         {
             EPICRetriever epicRetriever = new EPICRetriever();
             IEnumerable<EPICRootObject> epicRoot = await epicRetriever.GetEPIC();
@@ -60,10 +60,14 @@ namespace IndependentProject
                 ViewModel2.date[1] = dates[1];
                 ViewModel2.date[2] = dates[2].Substring(0,dates[2].IndexOf(" "));
                 ViewModel2.Image = GetImageURLFromNameDate(input.image, ViewModel2.date);
-
+                ViewModel2.distToEarth = Math.Sqrt(Math.Pow(input.dscovr_j2000_position.x, 2) + Math.Pow(input.dscovr_j2000_position.y, 2)
+                                       + Math.Pow(input.dscovr_j2000_position.z, 2));
+                ViewModel2.distToSun = Math.Sqrt(Math.Pow(input.sun_j2000_position.x, 2) + Math.Pow(input.sun_j2000_position.y, 2)
+                                       + Math.Pow(input.sun_j2000_position.z, 2))-ViewModel2.distToSun;
                 ViewModel.EPICInfos[count]=ViewModel2;
                 count++;
             }
+            Date.Text = "Date it was taken: "+ViewModel.EPICInfos[0].date[0] + ViewModel.EPICInfos[0].date[1] + ViewModel.EPICInfos[0].date[2];
         }
 
         private string GetImageURLFromNameDate(string Name, string[] date)
@@ -84,6 +88,8 @@ namespace IndependentProject
             }
             string ImageUrl = ViewModel.EPICInfos[count].Image;
             Url.UriSource = new Uri((string)ImageUrl);
+            distToSun.Text = "Distance from EPIC to Sun" + ViewModel.EPICInfos[count].distToSun+"km";
+            distToEarth.Text = "Distance from EPIC to Earth" + ViewModel.EPICInfos[count].distToEarth+"km";
 
         }
         private void Next_Click(object sender, RoutedEventArgs e)
@@ -100,7 +106,9 @@ namespace IndependentProject
             string ImageUrl = ViewModel.EPICInfos[count].Image;
 
             Url.UriSource = new Uri((string)ImageUrl);
-            
+
+            distToSun.Text = "Distance from EPIC to Sun: "+ViewModel.EPICInfos[count].distToSun+" km";
+            distToEarth.Text = "Distance from EPIC to Earth: " + ViewModel.EPICInfos[count].distToEarth+" km";
 
         }
     }

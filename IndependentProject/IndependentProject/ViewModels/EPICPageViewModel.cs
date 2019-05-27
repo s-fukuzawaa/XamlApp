@@ -15,6 +15,8 @@ namespace IndependentProject.ViewModels
 
         public string Image { get; set; }
         public string[] date { get; set; } = new string[3];
+        public double distToEarth { get; set; }
+        public double distToSun { get; set; } 
         
     }
 }

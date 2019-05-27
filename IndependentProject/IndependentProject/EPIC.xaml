@@ -12,24 +12,30 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
 
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" VerticalAlignment="Center">
-            <TextBlock Text="Whats is EPIC?" TextAlignment="Center" FontSize="50" FontWeight="Bold" Foreground="{StaticResource Brush}" />
-            <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="{StaticResource Brush}" Text="EPIC (Earth Polychromatic Imaging Camera) is a 10-channel spectroradiometer (317 – 780 nm) onboard NOAA's DSCOVR (Deep Space Climate Observatory) spacecraft. EPIC provides 10 narrow band spectral images of the entire sunlit face of Earth using a 2048x2048 pixel CCD (Charge Coupled Device) detector coupled to a 30-cm aperture Cassegrain telescope .
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="20,0,0,0">
+            <TextBlock Text="Whats is EPIC?" TextAlignment="Center" TextWrapping="Wrap" FontSize="50" FontWeight="Bold" Foreground="{StaticResource Brush}" />
+            <TextBlock TextAlignment="Center" Margin="0,20,0,0" TextWrapping="Wrap" Foreground="{StaticResource Brush}" Text="EPIC (Earth Polychromatic Imaging Camera) is a 10-channel spectroradiometer (317 – 780 nm) onboard NOAA's DSCOVR (Deep Space Climate Observatory) spacecraft. EPIC provides 10 narrow band spectral images of the entire sunlit face of Earth using a 2048x2048 pixel CCD (Charge Coupled Device) detector coupled to a 30-cm aperture Cassegrain telescope .
 
 The DSCOVR spacecraft is located at the Earth-Sun Lagrange-1 (L-1) point giving EPIC a unique angular perspective that will be used in science applications to measure ozone, aerosols, cloud reflectivity, cloud height, vegetation properties, and UV radiation estimates at Earth's surface." />
 
         </StackPanel>
         <StackPanel Grid.Column="1" Orientation="Horizontal">
-            <Button Name="Back" Style="{StaticResource MyButtonStyle}" Margin="20,0,20,0" FontFamily="Segoe MDL2 Assets" FontSize="18" Content="&#xE72B;" Click="Back_Click"></Button>
-            <Image Name="ResultImage"  Width="500" Height="500" HorizontalAlignment="Center">
+            <Button Name="Back" Style="{StaticResource MyButtonStyle}" Margin="10,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="18" Content="&#xE72B;" Click="Back_Click"></Button>
+            <Image Name="ResultImage"  Width="450" Height="450" HorizontalAlignment="Center">
                 <Image.Source>
                     <BitmapImage x:Name="Url"></BitmapImage>
                 </Image.Source>
             </Image>
-            <Button Name="Next" Style="{StaticResource MyButtonStyle}" Margin="20,0,20,0" FontFamily="Segoe MDL2 Assets" FontSize="18" Content="&#xE72A;" Click="Next_Click"></Button>
+            <Button Name="Next" Style="{StaticResource MyButtonStyle}" Margin="0,0,10,0" FontFamily="Segoe MDL2 Assets" FontSize="18" Content="&#xE72A;" Click="Next_Click"></Button>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="2" VerticalAlignment="Center">
+            <TextBlock Name="Date" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,0" FontWeight="Bold"/>
+            <TextBlock Name="distToEarth" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,0" FontWeight="Bold"/>
+            <TextBlock Name="distToSun" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,0" FontWeight="Bold"/>
 
         </StackPanel>
     </Grid>
