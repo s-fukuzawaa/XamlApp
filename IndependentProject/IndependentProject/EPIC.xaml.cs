@@ -35,7 +35,7 @@ namespace IndependentProject
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            
+
             await UpdateImagesCoords();
             this.count = 0;
 
@@ -48,7 +48,7 @@ namespace IndependentProject
             EPICRetriever epicRetriever = new EPICRetriever();
             IEnumerable<EPICRootObject> epicRoot = await epicRetriever.GetEPIC();
             int num = epicRoot.Count();
-            
+
             int count = 0;
             ViewModel.EPICInfos = new EPICPageViewModel[num];
 
@@ -58,29 +58,54 @@ namespace IndependentProject
                 String[] dates = input.date.Split('-');
                 ViewModel2.date[0] = dates[0];
                 ViewModel2.date[1] = dates[1];
-                ViewModel2.date[2] = dates[2].Substring(0,dates[2].IndexOf(" "));
+                ViewModel2.date[2] = dates[2].Substring(0, dates[2].IndexOf(" "));
                 ViewModel2.Image = GetImageURLFromNameDate(input.image, ViewModel2.date);
                 ViewModel2.distToEarth = Math.Sqrt(Math.Pow(input.dscovr_j2000_position.x, 2) + Math.Pow(input.dscovr_j2000_position.y, 2)
                                        + Math.Pow(input.dscovr_j2000_position.z, 2));
                 ViewModel2.distToSun = Math.Sqrt(Math.Pow(input.sun_j2000_position.x, 2) + Math.Pow(input.sun_j2000_position.y, 2)
-                                       + Math.Pow(input.sun_j2000_position.z, 2))-ViewModel2.distToSun;
-                ViewModel.EPICInfos[count]=ViewModel2;
+                                       + Math.Pow(input.sun_j2000_position.z, 2)) - ViewModel2.distToSun;
+                ViewModel.EPICInfos[count] = ViewModel2;
                 count++;
             }
-            Date.Text = "Date it was taken: "+ViewModel.EPICInfos[0].date[0] + ViewModel.EPICInfos[0].date[1] + ViewModel.EPICInfos[0].date[2];
+            Date.Text = "Date it was taken: " + ViewModel.EPICInfos[0].date[0] + ViewModel.EPICInfos[0].date[1] + ViewModel.EPICInfos[0].date[2];
         }
+        private async Task UpdateImagesCoords(string[] date)
+        {
+            EPICPickRetriever epicPickRetriever = new EPICPickRetriever(date);
+            IEnumerable<EPICRootObject> epicRoot = await epicPickRetriever.GetEPIC();
+            int num = epicRoot.Count();
 
+            int count = 0;
+            ViewModel.EPICInfos = new EPICPageViewModel[num];
+
+            foreach (EPICRootObject input in epicRoot)
+            {
+                EPICPageViewModel ViewModel2 = new EPICPageViewModel();
+                ViewModel2.date[0] = date[0];
+                ViewModel2.date[1] = date[1];
+                ViewModel2.date[2] = date[2];
+                ViewModel2.Image = GetImageURLFromNameDate(input.image, date);
+                ViewModel2.distToEarth = Math.Sqrt(Math.Pow(input.dscovr_j2000_position.x, 2) + Math.Pow(input.dscovr_j2000_position.y, 2)
+                                       + Math.Pow(input.dscovr_j2000_position.z, 2));
+                ViewModel2.distToSun = Math.Sqrt(Math.Pow(input.sun_j2000_position.x, 2) + Math.Pow(input.sun_j2000_position.y, 2)
+                                       + Math.Pow(input.sun_j2000_position.z, 2)) - ViewModel2.distToSun;
+                ViewModel.EPICInfos[count] = ViewModel2;
+                count++;
+            }
+            Date.Text = "Date it was taken: " + date[0]+date[1]+date[2];
+        }
         private string GetImageURLFromNameDate(string Name, string[] date)
         {
-            return "https://epic.gsfc.nasa.gov/archive/natural/"+ date[0]+"/"+date[1]+"/"+date[2]+"/png/" + Name +".png";
+            return "https://epic.gsfc.nasa.gov/archive/natural/" + date[0] + "/" + date[1] + "/" + date[2] + "/png/" + Name + ".png";
         }
+        
 
         private int count = 0;
         private void Back_Click(object sender, RoutedEventArgs e)
-        { 
-            if(count ==0 )
+        {
+            if (count == 0)
             {
-                count = ViewModel.EPICInfos.Length-1;
+                count = ViewModel.EPICInfos.Length - 1;
             }
             else
             {
@@ -88,8 +113,8 @@ namespace IndependentProject
             }
             string ImageUrl = ViewModel.EPICInfos[count].Image;
             Url.UriSource = new Uri((string)ImageUrl);
-            distToSun.Text = "Distance from EPIC to Sun" + ViewModel.EPICInfos[count].distToSun+"km";
-            distToEarth.Text = "Distance from EPIC to Earth" + ViewModel.EPICInfos[count].distToEarth+"km";
+            distToSun.Text = "Distance from EPIC to Sun" + ViewModel.EPICInfos[count].distToSun + "km";
+            distToEarth.Text = "Distance from EPIC to Earth" + ViewModel.EPICInfos[count].distToEarth + "km";
 
         }
         private void Next_Click(object sender, RoutedEventArgs e)
@@ -107,9 +132,34 @@ namespace IndependentProject
 
             Url.UriSource = new Uri((string)ImageUrl);
 
-            distToSun.Text = "Distance from EPIC to Sun: "+ViewModel.EPICInfos[count].distToSun+" km";
-            distToEarth.Text = "Distance from EPIC to Earth: " + ViewModel.EPICInfos[count].distToEarth+" km";
+            distToSun.Text = "Distance from EPIC to Sun: " + ViewModel.EPICInfos[count].distToSun + " km";
+            distToEarth.Text = "Distance from EPIC to Earth: " + ViewModel.EPICInfos[count].distToEarth + " km";
+
 
         }
+
+
+
+        private async void  Pick_DateChanged(CalendarDatePicker sender, CalendarDatePickerDateChangedEventArgs args)
+        {
+            string[] date = new string[3];
+            string[] pickdate = Pick.Date.ToString().Split('/');
+            date[2] = pickdate[1];
+            date[1] = pickdate[0];
+            date[0] = pickdate[2].Substring(0, pickdate[2].IndexOf(" "));
+
+            if (pickdate[1].Length == 1)
+            {
+                date[2] = "0" + pickdate[1];
+            }
+            if (pickdate[0].Length == 1)
+            {
+                date[1] = "0" + pickdate[0];
+            }
+            
+
+            await UpdateImagesCoords(date);
+        }
+
     }
 }
