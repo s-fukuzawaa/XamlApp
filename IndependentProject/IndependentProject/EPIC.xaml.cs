@@ -32,6 +32,8 @@ namespace IndependentProject
         public EPIC()
         {
             this.InitializeComponent();
+            Pick.MaxDate = DateTime.Today.AddDays(-1);
+            Pick.MinDate = new DateTime(2015, 6, 13);
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -73,6 +75,8 @@ namespace IndependentProject
         {
             EPICPickRetriever epicPickRetriever = new EPICPickRetriever(date);
             IEnumerable<EPICRootObject> epicRoot = await epicPickRetriever.GetEPIC();
+
+            
             int num = epicRoot.Count();
 
             int count = 0;
@@ -142,6 +146,12 @@ namespace IndependentProject
 
         private async void  Pick_DateChanged(CalendarDatePicker sender, CalendarDatePickerDateChangedEventArgs args)
         {
+            if(Pick.IsTodayHighlighted)
+            {
+                await UpdateImagesCoords();
+            }
+            
+
             string[] date = new string[3];
             string[] pickdate = Pick.Date.ToString().Split('/');
             date[2] = pickdate[1];

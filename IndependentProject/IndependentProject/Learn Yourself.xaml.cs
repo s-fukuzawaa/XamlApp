@@ -43,7 +43,7 @@ namespace IndependentProject
                         "Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system – that title belongs to nearby Venus, " +
                         "thanks to its dense atmosphere.";
                     bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/mercury.jpg");
-
+                    credit.Text = "https://solarsystem.nasa.gov/planets/mercury/overview/";
                 }
                 if (item.Content.Equals("Venus"))
                 {
@@ -51,6 +51,8 @@ namespace IndependentProject
                         "Venus spins slowly in the opposite direction most planets do. Its thick atmosphere traps heat in a runaway greenhouse effect, " +
                         "making it the hottest planet in our solar system—with surface temperatures hot enough to melt lead. Glimpses below the clouds reveal volcanoes and deformed mountains. ";
                     bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/venus.jpg");
+                    credit.Text = "https://solarsystem.nasa.gov/planets/venus/overview/";
+
                 }
                 if (item.Content.Equals("Mars"))
                 {
@@ -58,6 +60,8 @@ namespace IndependentProject
                         "desert world with a very thin atmosphere."+ "This dynamic planet has seasons, polar ice caps and weather and canyons and extinct volacanoes, " +
                         "evidence of an even more active past.";
                     bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/mars.jpg");
+                    credit.Text = "https://solarsystem.nasa.gov/planets/mars/overview/";
+
                 }
                 if (item.Content.Equals("Jupiter"))
                 {
@@ -67,12 +71,16 @@ namespace IndependentProject
                         "floating in an atmosphere of hydrogen and helium. Jupiter’s iconic Great Red Spot is a giant storm " +
                         "bigger than Earth that has raged for hundreds of years.";
                     bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/jupiter.jpg");
+                    credit.Text = "https://solarsystem.nasa.gov/planets/jupiter/overview/";
+
                 }
                 if (item.Content.Equals("Neptune"))
                 {
                     ComboBoxResultTextBlock.Text = "Dark, cold and whipped by supersonic winds, ice giant Neptune is the eighth and most distant planet in our solar system."+
                         "More than 30 times as far from the Sun as Earth, Neptune is the only planet in our solar system not visible to the naked eye and the first predicted by mathematics before its discovery. In 2011 Neptune completed its first 165-year orbit since its discovery in 1846.";
                     bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/neptune.jpg");
+                    credit.Text = "https://solarsystem.nasa.gov/planets/neptune/overview/";
+
                 }
                 if (item.Content.Equals("Saturn"))
                 {
@@ -80,6 +88,8 @@ namespace IndependentProject
                         + "Adorned with thousands of beautiful ringlets, Saturn is unique among the planets. It is not the only planet to have rings—made of chunks of ice and rock—" +
                         "but none are as spectacular or as complicated as Saturn's."+ "Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.";
                     bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/saturn.jpg");
+                    credit.Text = "https://solarsystem.nasa.gov/planets/saturn/overview/";
+
                 }
                 if (item.Content.Equals("Uranus"))
                 {
@@ -92,6 +102,8 @@ namespace IndependentProject
                         "the Greek god of the sky, " +
                         "as suggested by Johann Bode.​";
                     bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/uranus.jpg");
+                    credit.Text = "https://solarsystem.nasa.gov/planets/uranus/overview/";
+
                 }
                 if (item.Content.Equals("Earth"))
                 {
@@ -101,6 +113,8 @@ namespace IndependentProject
                                                    "Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun," +
                                                    " all of which are made of rock and metal.";
                     bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/earth.jpg");
+                    credit.Text = "https://solarsystem.nasa.gov/planets/earth/overview/";
+
                 }
             }
         }

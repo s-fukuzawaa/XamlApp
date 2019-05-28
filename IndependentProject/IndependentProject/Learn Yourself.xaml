@@ -8,12 +8,12 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
- 
-    
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Vertical" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Learn Yourself" Foreground="{StaticResource Brush}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="70" />
@@ -27,15 +27,20 @@
                 <ComboBoxItem Content="Uranus"/>
                 <ComboBoxItem Content="Neptune"/>
             </ComboBox>
-            
+
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
             <TextBlock  HorizontalTextAlignment="Center" Margin="-20,-20,0,0" Foreground="{StaticResource Brush}" MinHeight="200" MinWidth="200" MaxWidth="500" MaxHeight="500" FontSize="25" Grid.Row="1" Name="ComboBoxResultTextBlock"  TextAlignment="Center" TextWrapping="Wrap"/>
             <Image Name="ComboBoxResultImage" MaxWidth="500" Margin="20,-20,0,0" MaxHeight="500" MinHeight="200" MinWidth="200">
                 <Image.Source>
                     <BitmapImage x:Name="bit"></BitmapImage>
                 </Image.Source>
             </Image>
+            </StackPanel>
+            <TextBlock Name="credit" Grid.Row="1" VerticalAlignment="Bottom" Margin="0,20,0,0" Foreground="{StaticResource Brush}"/>
+
         </StackPanel>
+
     </Grid>
 </Page>
