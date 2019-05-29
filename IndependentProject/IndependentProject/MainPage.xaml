@@ -46,7 +46,7 @@
                 </ListBox>
             </SplitView.Pane>
             <SplitView.Content>
-                <Frame Name="InnerFrame" HorizontalAlignment="Center"  HorizontalContentAlignment="Center"  Margin="0,-44,0,0" Width="1435" />
+                <Frame Name="InnerFrame" HorizontalAlignment="Right"  HorizontalContentAlignment="Right"  Margin="0,-44,0,0"  />
             </SplitView.Content>
         </SplitView>
 
