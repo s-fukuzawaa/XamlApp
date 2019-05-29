@@ -47,9 +47,9 @@ The DSCOVR spacecraft is located at the Earth-Sun Lagrange-1 (L-1) point giving 
 
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="0,0,0,20">
-            <TextBlock Name="Date" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,0" FontWeight="Bold"/>
-            <TextBlock Name="distToEarth" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,0" FontWeight="Bold"/>
-            <TextBlock Name="distToSun" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,0" FontWeight="Bold"/>
+            <TextBlock Name="Date" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,20" FontWeight="Bold"/>
+            <TextBlock Name="distToEarth" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,20" FontWeight="Bold"/>
+            <TextBlock Name="distToSun" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,20" FontWeight="Bold"/>
 
         </StackPanel>
     </Grid>
