@@ -26,21 +26,21 @@
                     <ListBoxItem Name="EPICListBoxItem">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE909;" />
-                            <TextBlock Text="EPIC" FontSize="24" Margin="10,0,0,0" />
+                            <TextBlock Text="EPIC" FontSize="20" Margin="10,0,0,0" />
                         </StackPanel>
                     </ListBoxItem>
 
                     <ListBoxItem Name="LearnYourselfListBoxItem">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE734;" />
-                            <TextBlock Text="Learn Yourself" FontSize="24" Margin="10,0,0,0" FontFamily="Segoe UI" />
+                            <TextBlock Text="Learn Yourself" FontSize="20" Margin="10,0,0,0" FontFamily="Segoe UI" />
                         </StackPanel>
                     </ListBoxItem>
 
                     <ListBoxItem Name="WelcomeListBoxItem">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE72B;" />
-                            <TextBlock Text="Main" FontSize="24" Margin="10,0,0,0" FontFamily="Segoe UI" />
+                            <TextBlock Text="Main" FontSize="20" Margin="10,0,0,0" FontFamily="Segoe UI" />
                         </StackPanel>
                     </ListBoxItem>
                 </ListBox>
