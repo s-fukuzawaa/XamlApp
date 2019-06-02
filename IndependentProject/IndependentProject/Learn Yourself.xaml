@@ -13,11 +13,14 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Vertical" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Learn Yourself" Foreground="{StaticResource Brush}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" />
-            <ComboBox PlaceholderText="Select Solar planet from drop down list" FontSize="20" Foreground="{StaticResource Brush}" HorizontalAlignment="Center" SelectionChanged="ComboBox_SelectionChanged" Margin="0,20,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+            <TextBlock Text="Learn Yourself" Foreground="{StaticResource Brush}" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" />
+        <ComboBox PlaceholderText="Select Solar planet from drop down list" FontSize="20" Foreground="{StaticResource Brush}" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" SelectionChanged="ComboBox_SelectionChanged" Margin="0,20,0,0">
                 <ComboBoxItem Content="Mercury"/>
                 <ComboBoxItem Content="Venus"/>
                 <ComboBoxItem Content="Earth"/>
@@ -28,19 +31,14 @@
                 <ComboBoxItem Content="Neptune"/>
             </ComboBox>
 
-        </StackPanel>
-        <StackPanel Orientation="Vertical" Grid.Row="1" >
-            <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
-            <TextBlock  HorizontalTextAlignment="Left" LineHeight="1.5" Margin="-20,-20,0,20" Foreground="{StaticResource Brush}" MinHeight="200" MinWidth="200" MaxWidth="500" MaxHeight="500" FontSize="25" Grid.Row="1" Name="ComboBoxResultTextBlock"  TextAlignment="Center" TextWrapping="Wrap"/>
-            <Image Name="ComboBoxResultImage" MaxWidth="500" Margin="20,-20,0,20" MaxHeight="500" MinHeight="200" MinWidth="200">
+            <TextBlock Grid.Column="0" LineHeight="1.5"  Foreground="{StaticResource Brush}" VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="25" Grid.Row="1" Name="ComboBoxResultTextBlock"  TextAlignment="Center" TextWrapping="Wrap"/>
+            <Image Name="ComboBoxResultImage" Grid.Column="1" Grid.Row="1" Stretch="Uniform" MaxWidth="500"  MaxHeight="500" MinHeight="200" MinWidth="200">
                 <Image.Source>
                     <BitmapImage x:Name="bit"></BitmapImage>
                 </Image.Source>
             </Image>
-            </StackPanel>
             <TextBlock Name="credit" Grid.Row="1" VerticalAlignment="Bottom" Margin="0,20,0,50" Foreground="{StaticResource Brush}"/>
 
-        </StackPanel>
 
     </Grid>
 </Page>
