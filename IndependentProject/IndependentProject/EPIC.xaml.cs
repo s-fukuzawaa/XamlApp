@@ -177,5 +177,9 @@ namespace IndependentProject
             await UpdateImagesCoords(date);
         }
 
+        private void Slide_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

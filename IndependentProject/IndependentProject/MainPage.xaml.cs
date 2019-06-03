@@ -30,6 +30,7 @@ namespace IndependentProject
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+            MySplitView.Visibility = Visibility.Visible;
         }
 
         private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -48,6 +49,7 @@ namespace IndependentProject
             {
 
                 InnerFrame.Navigate(typeof(Welcome));
+                WelcomeListBoxItem.IsSelected = false;
             }
 
         }

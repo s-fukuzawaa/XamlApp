@@ -31,13 +31,13 @@
                 <ComboBoxItem Content="Neptune"/>
             </ComboBox>
 
-            <TextBlock Grid.Column="0" LineHeight="1.5"  Foreground="{StaticResource Brush}" VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="25" Grid.Row="1" Name="ComboBoxResultTextBlock"  TextAlignment="Center" TextWrapping="Wrap"/>
+            <TextBlock Grid.Column="0" LineHeight="1.5"  Foreground="{StaticResource Brush}" VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="25" Grid.Row="1" Name="ComboBoxResultTextBlock"  TextAlignment="Center" TextWrapping="Wrap" Margin="20,0,20,0"/>
             <Image Name="ComboBoxResultImage" Grid.Column="1" Grid.Row="1" Stretch="Uniform" MaxWidth="500"  MaxHeight="500" MinHeight="200" MinWidth="200">
                 <Image.Source>
                     <BitmapImage x:Name="bit"></BitmapImage>
                 </Image.Source>
             </Image>
-            <TextBlock Name="credit" Grid.Row="1" VerticalAlignment="Bottom" Margin="0,20,0,50" Foreground="{StaticResource Brush}"/>
+            <TextBlock Name="credit" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,20,0,50" Foreground="{StaticResource Brush}"/>
 
 
     </Grid>
