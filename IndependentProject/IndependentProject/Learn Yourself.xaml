@@ -19,7 +19,7 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-            <TextBlock Text="Learn Yourself" Foreground="{StaticResource Brush}" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontFamily="Garamond"/>
+            <TextBlock Text="Learn Yourself" Foreground="{StaticResource Brush}" Grid.Row="0" FontWeight="Bold" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontFamily="Garamond"/>
         <ComboBox PlaceholderText="Select Solar planet from drop down list" FontSize="20" Foreground="{StaticResource Brush}" FontFamily="Garamond" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" SelectionChanged="ComboBox_SelectionChanged" Margin="0,20,0,0">
                 <ComboBoxItem Content="Mercury" FontFamily="Garamond" FontWeight="SemiBold"/>
             <ComboBoxItem Content="Venus" FontFamily="Garamond" FontWeight="SemiBold"/>

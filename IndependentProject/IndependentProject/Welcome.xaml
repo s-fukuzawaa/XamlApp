@@ -26,7 +26,7 @@
             </Image.Source>
            
         </Image>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Welcome to LASTRON!" FontSize="50" FontWeight="Bold" Foreground="{StaticResource Brush}" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Garamond" Margin="0,0,0,20"/>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Welcome to LASTRON!" FontSize="50" FontWeight="SemiBold" Foreground="{StaticResource Brush}" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Garamond" Margin="0,0,0,20"/>
         <Button Name="showUp" Grid.ColumnSpan="2" Content="Want to know more about the background image?" FontFamily="Garamond" Style="{StaticResource MyButtonStyle}" FontSize="20" HorizontalAlignment="Center" Margin="0,100,0,0" Click="showUp_Click"/>
 
 
