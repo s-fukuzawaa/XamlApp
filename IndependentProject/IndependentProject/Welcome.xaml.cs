@@ -42,7 +42,8 @@ namespace IndependentProject
             APODRootObject apodRoot = await apodRetriever.GetAPOD();
 
             ViewModel.ImageUrl = apodRoot.url;
-
+            explain.Text = apodRoot.explanation;
+           title.Text = apodRoot.title;
         }
 
         

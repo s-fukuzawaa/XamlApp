@@ -22,7 +22,10 @@
             </Image.Source>
            
         </Image>
-        
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0">
+            <TextBlock Name="title" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="{StaticResource Brush}"/>
+            <TextBlock Name="explain" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" Width="500" Height="500" Foreground="{StaticResource Brush}"/>
+        </StackPanel>
         <TextBlock Grid.Row="0" Text="Welcome to LASTRON!" FontSize="50"  Foreground="{StaticResource Brush}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
        
     </Grid>
