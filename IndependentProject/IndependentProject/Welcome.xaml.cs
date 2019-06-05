@@ -30,6 +30,8 @@ namespace IndependentProject
         public Welcome()
         {
             this.InitializeComponent();
+            title.Visibility = Visibility.Collapsed;
+            explain.Visibility = Visibility.Collapsed;
         }
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
@@ -46,6 +48,23 @@ namespace IndependentProject
            title.Text = apodRoot.title;
         }
 
-        
+        private void showUp_Click(object sender, RoutedEventArgs e)
+        {
+
+            if(title.Visibility==Visibility.Collapsed)
+            {
+                title.Visibility = Visibility.Visible;
+                explain.Visibility = Visibility.Visible;
+                showUp.Content = "Collapse description";
+                return;
+            }
+            if (title.Visibility == Visibility.Visible)
+            {
+                showUp.Content = "Want to know more about the background image?";
+                title.Visibility = Visibility.Collapsed;
+                explain.Visibility = Visibility.Collapsed;
+                return;
+            }
+        }
     }
 }

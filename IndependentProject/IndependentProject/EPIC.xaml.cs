@@ -70,8 +70,8 @@ namespace IndependentProject
                 count++;
             }
             Date.Text = "Date it was taken: " + ViewModel.EPICInfos[0].date[0] + ViewModel.EPICInfos[0].date[1] + ViewModel.EPICInfos[0].date[2];
-            distToSun.Text = "Distance from EPIC to Sun: " + ViewModel.EPICInfos[0].distToSun + "km";
-            distToEarth.Text = "Distance from EPIC to Earth: " + ViewModel.EPICInfos[0].distToEarth + "km";
+            distToSun.Text = "Distance from EPIC to Sun: " + ViewModel.EPICInfos[0].distToSun + " km";
+            distToEarth.Text = "Distance from EPIC to Earth: " + ViewModel.EPICInfos[0].distToEarth + " km";
 
         }
         private async Task UpdateImagesCoords(string[] date)
@@ -100,8 +100,8 @@ namespace IndependentProject
                 count++;
             }
             Date.Text = "Date it was taken: " + date[0]+date[1]+date[2];
-            distToSun.Text = "Distance from EPIC to Sun: " + ViewModel.EPICInfos[0].distToSun + "km";
-            distToEarth.Text = "Distance from EPIC to Earth: " + ViewModel.EPICInfos[0].distToEarth + "km";
+            distToSun.Text = "Distance from EPIC to Sun: " + ViewModel.EPICInfos[0].distToSun + " km";
+            distToEarth.Text = "Distance from EPIC to Earth: " + ViewModel.EPICInfos[0].distToEarth + " km";
 
         }
         private string GetImageURLFromNameDate(string Name, string[] date)
@@ -123,8 +123,8 @@ namespace IndependentProject
             }
             string ImageUrl = ViewModel.EPICInfos[count].Image;
             Url.UriSource = new Uri((string)ImageUrl);
-            distToSun.Text = "Distance from EPIC to Sun: " + ViewModel.EPICInfos[count].distToSun + "km";
-            distToEarth.Text = "Distance from EPIC to Earth: " + ViewModel.EPICInfos[count].distToEarth + "km";
+            distToSun.Text = "Distance from EPIC to Sun: " + ViewModel.EPICInfos[count].distToSun + " km";
+            distToEarth.Text = "Distance from EPIC to Earth: " + ViewModel.EPICInfos[count].distToEarth + " km";
 
         }
         private void Next_Click(object sender, RoutedEventArgs e)

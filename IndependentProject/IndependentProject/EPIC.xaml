@@ -20,16 +20,17 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center" Margin="0,0,20,0">
-            <TextBlock Text="What is EPIC?" TextAlignment="Center" TextWrapping="Wrap" FontSize="50" FontWeight="Bold" Foreground="{StaticResource Brush}" />
-            <TextBlock TextAlignment="Center" Margin="0,20,0,0" TextWrapping="Wrap" Foreground="{StaticResource Brush}" Text="EPIC (Earth Polychromatic Imaging Camera) is a 10-channel spectroradiometer (317 – 780 nm) onboard NOAA's DSCOVR (Deep Space Climate Observatory) spacecraft. EPIC provides 10 narrow band spectral images of the entire sunlit face of Earth using a 2048x2048 pixel CCD (Charge Coupled Device) detector coupled to a 30-cm aperture Cassegrain telescope .
+            <TextBlock Text="What is EPIC?" Margin="20,0,0,0" TextAlignment="Center" TextWrapping="Wrap" FontSize="50" FontWeight="Bold" Foreground="{StaticResource Brush}" FontFamily="Garamond"/>
+            <TextBlock TextAlignment="Center" Margin="20,20,0,0" TextWrapping="Wrap" FontSize="25" Style="{StaticResource MyFont}" Foreground="{StaticResource Brush}" Text="EPIC (Earth Polychromatic Imaging Camera) is a 10-channel spectroradiometer (317 – 780 nm) onboard NOAA's DSCOVR (Deep Space Climate Observatory) spacecraft. EPIC provides 10 narrow band spectral images of the entire sunlit face of Earth using a 2048x2048 pixel CCD (Charge Coupled Device) detector coupled to a 30-cm aperture Cassegrain telescope .
 
 The DSCOVR spacecraft is located at the Earth-Sun Lagrange-1 (L-1) point giving EPIC a unique angular perspective that will be used in science applications to measure ozone, aerosols, cloud reflectivity, cloud height, vegetation properties, and UV radiation estimates at Earth's surface." />
 
 
-            <TextBlock Text="https://epic.gsfc.nasa.gov/about/epic" Foreground="{StaticResource Brush}" HorizontalAlignment="Right" Margin="0,10,0,0"/>
+            <TextBlock Text="https://epic.gsfc.nasa.gov/about/epic" Foreground="{StaticResource Brush}" HorizontalAlignment="Right" Margin="0,10,0,0" Style="{StaticResource MyFont}"/>
             <CalendarDatePicker
                 Name="Pick"
                 PlaceholderText="Choose a date"
+                FontFamily="Garamond"
                 HorizontalAlignment="Center"
                 DateChanged="Pick_DateChanged"
                 Margin="0,20,0,0" 
@@ -46,9 +47,9 @@ The DSCOVR spacecraft is located at the Earth-Sun Lagrange-1 (L-1) point giving 
 
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="0,0,0,20">
-            <TextBlock Name="Date" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,20" FontWeight="Bold"/>
-            <TextBlock Name="distToEarth" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,20" FontWeight="Bold"/>
-            <TextBlock Name="distToSun" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,20" FontWeight="Bold"/>
+            <TextBlock Name="Date" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,20" FontWeight="Bold" FontFamily="Garamond"/>
+            <TextBlock Name="distToEarth" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,20" FontWeight="Bold" FontFamily="Garamond"/>
+            <TextBlock Name="distToSun" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" Margin="20,20,20,20" FontWeight="Bold" FontFamily="Garamond"/>
 
         </StackPanel>
     </Grid>

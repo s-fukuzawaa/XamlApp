@@ -16,17 +16,23 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Image Name="resultImage" Grid.Row="0" Stretch="UniformToFill" HorizontalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Name="resultImage" Grid.Row="0" Grid.ColumnSpan="2" Stretch="UniformToFill" HorizontalAlignment="Stretch">
             <Image.Source>
                 <BitmapImage UriSource="{x:Bind ViewModel.ImageUrl, Mode=OneWay}" />
             </Image.Source>
            
         </Image>
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0">
-            <TextBlock Name="title" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="{StaticResource Brush}"/>
-            <TextBlock Name="explain" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" Width="500" Height="500" Foreground="{StaticResource Brush}"/>
-        </StackPanel>
-        <TextBlock Grid.Row="0" Text="Welcome to LASTRON!" FontSize="50"  Foreground="{StaticResource Brush}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Welcome to LASTRON!" FontSize="50" FontWeight="Bold" Foreground="{StaticResource Brush}" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Garamond" Margin="0,0,0,20"/>
+        <Button Name="showUp" Grid.ColumnSpan="2" Content="Want to know more about the background image?" FontFamily="Garamond" Style="{StaticResource MyButtonStyle}" FontSize="20" HorizontalAlignment="Center" Margin="0,100,0,0" Click="showUp_Click"/>
+
+
+        <TextBlock Name="title" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Garamond"  FontSize="24" Foreground="{StaticResource Brush}" Margin="0,20,0,0" FontWeight="Bold" TextDecorations="Underline"/>
+        <TextBlock Name="explain" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource MyFont}"  TextWrapping="Wrap" Width="500" Height="500" Foreground="{StaticResource Brush}" Margin="0,50,20,0"/>
+        
        
     </Grid>
 </Page>
