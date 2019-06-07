@@ -13,14 +13,20 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="3*" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-            <TextBlock Text="Learn Yourself" Foreground="{StaticResource Brush}" Grid.Row="0" FontWeight="Bold" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontFamily="Garamond"/>
-        <ComboBox PlaceholderText="Select Solar planet from drop down list" FontSize="20" Foreground="{StaticResource Brush}" FontFamily="Garamond" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" SelectionChanged="ComboBox_SelectionChanged" Margin="0,20,0,0">
+
+
+        <Image Source="Assets/Typeform-Blog-BlackFriday-Cover-AskAwesomely.jpg" Grid.ColumnSpan="2" Grid.RowSpan="2" Stretch="UniformToFill"/>
+
+
+        <TextBlock Text="Learn Yourself" Foreground="{StaticResource Brush}" Grid.Row="0" FontWeight="Bold" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="50" FontFamily="Garamond"/>
+        <ComboBox PlaceholderText="Select Solar planet from drop down list" FontSize="20" Foreground="{StaticResource Brush}" FontFamily="Garamond" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" SelectionChanged="ComboBox_SelectionChanged" Margin="0,20,0,0">
                 <ComboBoxItem Content="Mercury" FontFamily="Garamond" FontWeight="SemiBold"/>
             <ComboBoxItem Content="Venus" FontFamily="Garamond" FontWeight="SemiBold"/>
             <ComboBoxItem Content="Earth" FontFamily="Garamond" FontWeight="SemiBold"/>
@@ -31,13 +37,13 @@
             <ComboBoxItem Content="Neptune" FontFamily="Garamond" FontWeight="SemiBold"/>
             </ComboBox>
 
-            <TextBlock Grid.Column="0" LineHeight="1.5"  Foreground="{StaticResource Brush}" VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="25" Grid.Row="1" Name="ComboBoxResultTextBlock" FontFamily="Garamond" TextAlignment="Center" TextWrapping="Wrap" Margin="20,0,20,0"/>
-            <Image Name="ComboBoxResultImage" Grid.Column="1" Grid.Row="1" Stretch="Uniform" MaxWidth="500"  MaxHeight="500" MinHeight="200" MinWidth="200">
+            <TextBlock Grid.Column="0" LineHeight="1.5"  Foreground="{StaticResource Brush}" VerticalAlignment="Top" HorizontalAlignment="Center"  FontSize="25" Grid.Row="2" Name="ComboBoxResultTextBlock" FontFamily="Garamond" TextAlignment="Center" TextWrapping="Wrap" Margin="20,0,20,0"/>
+            <Image Name="ComboBoxResultImage" Grid.Column="1" Grid.Row="2" Stretch="Uniform" MaxWidth="500"  MaxHeight="500" MinHeight="200" MinWidth="200" VerticalAlignment="Top">
                 <Image.Source>
                     <BitmapImage x:Name="bit"></BitmapImage>
                 </Image.Source>
             </Image>
-        <TextBlock Name="credit" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,20,0,50" FontFamily="Garamond" FontWeight="SemiBold" Foreground="{StaticResource Brush}"/>
+        <TextBlock Name="credit" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,20,0,50" FontFamily="Garamond" FontWeight="SemiBold" Foreground="{StaticResource Brush}"/>
 
 
     </Grid>

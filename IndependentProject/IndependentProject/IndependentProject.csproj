@@ -127,6 +127,7 @@
     <Content Include="Assets\mercury.jpg" />
     <Content Include="Assets\neptune.jpg" />
     <Content Include="Assets\saturn.jpg" />
+    <Content Include="Assets\Typeform-Blog-BlackFriday-Cover-AskAwesomely.jpg" />
     <Content Include="Assets\uranus.jpg" />
     <Content Include="Assets\venus.png" />
     <Content Include="FodyWeavers.xml" />
