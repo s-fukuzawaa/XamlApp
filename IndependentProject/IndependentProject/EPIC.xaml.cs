@@ -102,6 +102,8 @@ namespace IndependentProject
             Date.Text = "Date it was taken: " + date[0]+date[1]+date[2];
             distToSun.Text = "Distance from EPIC to Sun: " + ViewModel.EPICInfos[0].distToSun + " km";
             distToEarth.Text = "Distance from EPIC to Earth: " + ViewModel.EPICInfos[0].distToEarth + " km";
+            string ImageUrl = ViewModel.EPICInfos[0].Image;
+            Url.UriSource = new Uri((string)ImageUrl);
 
         }
         private string GetImageURLFromNameDate(string Name, string[] date)
@@ -148,7 +150,7 @@ namespace IndependentProject
 
         }
 
-
+        
 
         private async void  Pick_DateChanged(CalendarDatePicker sender, CalendarDatePickerDateChangedEventArgs args)
         {
@@ -156,6 +158,7 @@ namespace IndependentProject
             {
                 await UpdateImagesCoords();
             }
+            
             
 
             string[] date = new string[3];
