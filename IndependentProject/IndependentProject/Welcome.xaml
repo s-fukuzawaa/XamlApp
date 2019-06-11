@@ -19,8 +19,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Image Name="resultImage" Grid.RowSpan="3" Grid.ColumnSpan="2" Stretch="UniformToFill" HorizontalAlignment="Stretch">
             <Image.Source>
@@ -30,10 +30,10 @@
         </Image>
         <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Welcome to LASTRON!" FontSize="50" FontWeight="SemiBold" Foreground="{StaticResource Brush}" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontFamily="Garamond" Margin="0,0,0,20"/>
         <Button Name="showUp" Grid.Row="2" Grid.ColumnSpan="2" Content="Want to know more about the background image?" FontFamily="Garamond" Style="{StaticResource MyButtonStyle}" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Center" Click="showUp_Click" Margin="0,10,0,0"/>
-        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" HorizontalTextAlignment="Center" Text="This is an astronomy learning app where you can learn about solar planets and EPIC. In the EPIC page, by changing the date input, you can see Earth's mood on a specific day. Click the hamburger button to start exploring!!" Style="{StaticResource MyFont}"  TextWrapping="Wrap" Width="700" Foreground="{StaticResource Brush}"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" HorizontalTextAlignment="Center" Text="This is an astronomy learning app where you can learn about solar planets and EPIC. In the EPIC page, by changing the date input, you can see Earth's mood on a specific day. Click the hamburger button to start exploring!!" Style="{StaticResource MyFont}"  TextWrapping="Wrap" Width="700" Foreground="{StaticResource Brush}"/>
 
-        <TextBlock Name="title" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Garamond"  FontSize="24" Foreground="{StaticResource Brush}" Margin="0,20,0,0" FontWeight="Bold" TextDecorations="Underline"  />
-        <TextBlock Name="explain" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource MyFont}"  TextWrapping="Wrap" Width="500" Height="500" Foreground="{StaticResource Brush}" Margin="0,50,20,0"/>
+        <TextBlock Name="title" Grid.RowSpan="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Garamond"  FontSize="24" Foreground="{StaticResource Brush}" Margin="0,20,0,0" FontWeight="Bold" TextDecorations="Underline"  />
+        <TextBlock Name="explain" Grid.RowSpan="3" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource MyFont}"  TextWrapping="Wrap"  Foreground="{StaticResource Brush}" Margin="0,50,20,0"/>
 
         <TextBlock Name="credit" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,20,0,0" Style="{StaticResource MyFont}" Foreground="{StaticResource Brush}"/>
     </Grid>
