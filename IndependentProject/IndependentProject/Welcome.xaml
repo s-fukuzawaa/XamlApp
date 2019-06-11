@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Image Name="resultImage" Grid.RowSpan="3" Grid.ColumnSpan="2" Stretch="UniformToFill" HorizontalAlignment="Stretch">
             <Image.Source>
