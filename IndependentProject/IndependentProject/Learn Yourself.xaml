@@ -37,7 +37,7 @@
             <ComboBoxItem Content="Neptune" FontFamily="Garamond" FontWeight="SemiBold"/>
             </ComboBox>
 
-            <TextBlock Grid.Column="0" LineHeight="1.5"  Foreground="{StaticResource Brush}" VerticalAlignment="Top" HorizontalAlignment="Center"  FontSize="25" Grid.Row="2" Name="ComboBoxResultTextBlock" FontFamily="Garamond" TextAlignment="Center" TextWrapping="Wrap" Margin="20,0,20,0"/>
+            <TextBlock Grid.Column="0" LineHeight="1.5"  Foreground="{StaticResource Brush}" VerticalAlignment="Top" HorizontalAlignment="Center"  FontSize="25" Grid.Row="2" Name="ComboBoxResultTextBlock" FontFamily="Garamond" TextAlignment="Center" TextWrapping="Wrap" Margin="20,50,20,0"/>
             <Image Name="ComboBoxResultImage" Grid.Column="1" Grid.Row="2" Stretch="Uniform" MaxWidth="500"  MaxHeight="500" MinHeight="200" MinWidth="200" VerticalAlignment="Top">
                 <Image.Source>
                     <BitmapImage x:Name="bit"></BitmapImage>

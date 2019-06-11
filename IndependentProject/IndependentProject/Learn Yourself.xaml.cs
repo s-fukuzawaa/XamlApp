@@ -47,7 +47,7 @@ namespace IndependentProject
                     ComboBoxResultTextBlock.Text = "Second planet from the Sun and our closest planetary neighbor, Venus is similar in structure and size to Earth, but it is now a very different world. " +
                         "Venus spins slowly in the opposite direction most planets do. Its thick atmosphere traps heat in a runaway greenhouse effect, " +
                         "making it the hottest planet in our solar system—with surface temperatures hot enough to melt lead. Glimpses below the clouds reveal volcanoes and deformed mountains. ";
-                    bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/venus.jpg");
+                    bit.UriSource = new Uri(ComboBoxResultImage.BaseUri, "Assets/venus.png");
                     credit.Text = "https://solarsystem.nasa.gov/planets/venus/overview/";
 
                 }

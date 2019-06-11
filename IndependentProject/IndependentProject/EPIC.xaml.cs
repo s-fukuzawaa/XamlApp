@@ -150,34 +150,50 @@ namespace IndependentProject
 
         }
 
-        
+        private string[] saveDate = new string[3];
 
         private async void  Pick_DateChanged(CalendarDatePicker sender, CalendarDatePickerDateChangedEventArgs args)
         {
-            if(Pick.IsTodayHighlighted)
+           
+
+                string[] date = new string[3];
+            if (Pick.Date == null)
             {
-                await UpdateImagesCoords();
+                await UpdateImagesCoords(saveDate);
+                Pick.Date = new DateTime(int.Parse(saveDate[0]), int.Parse(saveDate[1]), int.Parse(saveDate[2]));
             }
             
-            
-
-            string[] date = new string[3];
-            string[] pickdate = Pick.Date.ToString().Split('/');
-            date[2] = pickdate[1];
-            date[1] = pickdate[0];
-            date[0] = pickdate[2].Substring(0, pickdate[2].IndexOf(" "));
-
-            if (pickdate[1].Length == 1)
+            else if(Pick.Date!=null)
             {
-                date[2] = "0" + pickdate[1];
-            }
-            if (pickdate[0].Length == 1)
-            {
-                date[1] = "0" + pickdate[0];
-            }
-            
+                string[] pickdate = Pick.Date.ToString().Split('/');
 
-            await UpdateImagesCoords(date);
+                date[2] = pickdate[1];
+                date[1] = pickdate[0];
+                date[0] = pickdate[2].Substring(0, pickdate[2].IndexOf(" "));
+
+                saveDate[2] = pickdate[1];
+                saveDate[1] = pickdate[0];
+                saveDate[0] = pickdate[2].Substring(0, pickdate[2].IndexOf(" "));
+
+
+                if (pickdate[1].Length == 1)
+                {
+                    date[2] = "0" + pickdate[1];
+                    saveDate[2] = "0" + pickdate[1];
+
+                }
+                if (pickdate[0].Length == 1)
+                {
+                    date[1] = "0" + pickdate[0];
+                    saveDate[1] = "0" + pickdate[0];
+
+                }
+
+
+                await UpdateImagesCoords(date);
+            }
+                
+            
         }
 
        
