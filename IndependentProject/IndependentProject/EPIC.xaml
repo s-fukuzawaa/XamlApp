@@ -21,7 +21,6 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
 
 
         </Grid.RowDefinitions>
@@ -29,36 +28,38 @@
         <Image Source="Assets/Typeform-Blog-BlackFriday-Cover-AskAwesomely.jpg" Stretch="UniformToFill" Grid.RowSpan="6" Grid.ColumnSpan="4"/>
 
         <TextBlock Text="What is EPIC?" Grid.Row="0" Grid.Column="0" TextAlignment="Center" VerticalAlignment="Bottom" TextWrapping="Wrap" FontSize="50" FontWeight="Bold" Foreground="{StaticResource Brush}" FontFamily="Garamond"/>
-        <TextBlock TextAlignment="Center" Margin="0,20,0,0" Grid.Row="1" Grid.Column="0"  TextWrapping="Wrap" FontSize="25" Style="{StaticResource MyFont}" Foreground="{StaticResource Brush}" Text="EPIC (Earth Polychromatic Imaging Camera) is a 10-channel spectroradiometer (317 – 780 nm) onboard NOAA's DSCOVR (Deep Space Climate Observatory) spacecraft. EPIC provides 10 narrow band spectral images of the entire sunlit face of Earth using a 2048x2048 pixel CCD (Charge Coupled Device) detector coupled to a 30-cm aperture Cassegrain telescope .
+        <TextBlock TextAlignment="Center" Margin="0,20,0,0" MaxWidth="700" Grid.Row="1"  VerticalAlignment="Center" Grid.Column="0"  TextWrapping="Wrap" FontSize="25" Style="{StaticResource MyFont}" Foreground="{StaticResource Brush}" Text="EPIC (Earth Polychromatic Imaging Camera) is a 10-channel spectroradiometer (317 – 780 nm) onboard NOAA's DSCOVR (Deep Space Climate Observatory) spacecraft. EPIC provides 10 narrow band spectral images of the entire sunlit face of Earth using a 2048x2048 pixel CCD (Charge Coupled Device) detector coupled to a 30-cm aperture Cassegrain telescope .
 
 The DSCOVR spacecraft is located at the Earth-Sun Lagrange-1 (L-1) point giving EPIC a unique angular perspective that will be used in science applications to measure ozone, aerosols, cloud reflectivity, cloud height, vegetation properties, and UV radiation estimates at Earth's surface." />
 
 
-        <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Text="https://epic.gsfc.nasa.gov/about/epic" Foreground="{StaticResource Brush}"  Style="{StaticResource MyFont}"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Top" Margin="0,0,20,0" HorizontalAlignment="Right" Text="https://epic.gsfc.nasa.gov/about/epic" Foreground="{StaticResource Brush}"  Style="{StaticResource MyFont}"/>
             <CalendarDatePicker
                 Name="Pick"
                 PlaceholderText="Choose a date"
                 FontSize="24"
                 FontFamily="Garamond"
                 HorizontalAlignment="Center"
+                VerticalAlignment="Top"
                 HorizontalContentAlignment="Center"
                 DateChanged="Pick_DateChanged"
                 Width="200"
+                
                 Grid.Row="3" Grid.Column="0"
                 />
 
-        <Button Name="Back" Grid.RowSpan="6" Grid.Column="1" HorizontalAlignment="Left" Style="{StaticResource MyButtonStyle}" FontFamily="Segoe MDL2 Assets" FontSize="18" Content="&#xE72B;" Click="Back_Click"></Button>
-        <Image Name="ResultImage" Grid.RowSpan="6" Grid.Column="1" Margin="0,-20,0,0" Width="450" Height="450" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button Name="Back" Grid.Row="0" Grid.RowSpan="2"  Grid.Column="1" HorizontalAlignment="Left" Style="{StaticResource MyButtonStyle}" FontFamily="Segoe MDL2 Assets" FontSize="18" Content="&#xE72B;" Click="Back_Click"></Button>
+        <Image Name="ResultImage" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Margin="0,-20,0,0" Width="450" Height="450" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image.Source>
                     <BitmapImage x:Name="Url"></BitmapImage>
                 </Image.Source> 
             </Image>
-        <Button Name="Next" HorizontalAlignment="Right" Grid.RowSpan="6" Grid.Column="1" Style="{StaticResource MyButtonStyle}"  FontFamily="Segoe MDL2 Assets" FontSize="18" Content="&#xE72A;" Click="Next_Click"></Button>
+        <Button Name="Next" HorizontalAlignment="Right" Grid.Row="0" Grid.RowSpan="2"  Grid.Column="1" Style="{StaticResource MyButtonStyle}"  FontFamily="Segoe MDL2 Assets" FontSize="18" Content="&#xE72A;" Click="Next_Click"></Button>
 
 
-        <TextBlock Name="Date" Margin="0,20,0,0"  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24"  FontWeight="Bold" FontFamily="Garamond"/>
-        <TextBlock Name="distToEarth" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24"  FontWeight="Bold" FontFamily="Garamond"/>
-        <TextBlock Name="distToSun" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" FontWeight="Bold" FontFamily="Garamond"/>
+        <TextBlock Name="Date" HorizontalAlignment="Center" VerticalAlignment="Top"  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24"  FontWeight="Bold" FontFamily="Garamond"/>
+        <TextBlock Name="distToEarth" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="3" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24"  FontWeight="Bold" FontFamily="Garamond"/>
+        <TextBlock Name="distToSun" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" Grid.ColumnSpan="3" Foreground="{StaticResource Brush}" TextWrapping="Wrap" FontSize="24" FontWeight="Bold" FontFamily="Garamond"/>
 
        
     </Grid>
